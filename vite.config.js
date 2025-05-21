@@ -4,5 +4,5 @@ import { fileURLToPath } from 'url'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [vue()],
-  base: '/tffatw-web/', // 修改为仓库名称的路径
+  base: '/', // 修改为仓库名称的路径
 })
