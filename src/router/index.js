@@ -51,7 +51,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory('/association-web/'),
+  history: createWebHistory('/tffatw-web/'),
   routes,
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
