@@ -5,7 +5,7 @@
         <!-- Logo部分 -->
         <div class="flex items-center">
           <router-link to="/" class="flex items-center">
-            <img src="../assets/logo.png" alt="/" class="h-10 w-auto mr-2">
+            <img src="../assets/logo.jpg" alt="/" class="h-10 w-auto mr-2">
             <span class="text-xl font-bold text-red-700">台灣速食餐飲協會</span>
           </router-link>
         </div>

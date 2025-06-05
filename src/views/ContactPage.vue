@@ -28,7 +28,7 @@
                 <div>
                   <h3 class="text-lg font-semibold text-gray-800 mb-1">辦公地址</h3>
                   <p class="text-gray-600">
-                    台北市xx區xxx路三段303號
+                    台北市內湖區新湖二路156號
                   </p>
                 </div>
               </div>
@@ -42,8 +42,7 @@
                 <div>
                   <h3 class="text-lg font-semibold text-gray-800 mb-1">電話</h3>
                   <p class="text-gray-600">
-                    秘書處: (+886) 2-2505-8888<br>
-                    會員服務: (+886) 2-2505-8888
+                    0912-272-684‬<br>
                   </p>
                 </div>
               </div>

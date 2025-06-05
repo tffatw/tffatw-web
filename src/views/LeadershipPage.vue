@@ -147,6 +147,9 @@ import bioTechImg from '../assets/bio_tech.jpg';
 import ericaImg from '../assets/erica_tech.png';
 import lodpolImg from '../assets/lodpol.png';
 import maleIconImg from '../assets/male_icon.png';
+import wimImg from '../assets/wim.jpg';
+import howmamaImg from '../assets/howmama.jpg';
+import freshKingImg from '../assets/freshking.jpg';
 
 // 理事會成員數據
 const boardMembers = [
@@ -224,6 +227,30 @@ const brands = [
     description: '我們是一群來自不同領域的工程師團隊，也是對紙杯製造充滿熱情的創業者，致力研究提升技術，應用科技解決問題。',
     category: '供應商',
     website: 'https://lodpol.com/'
+  },
+  {
+    id: 6,
+    name: '味亦美',
+    logo: wimImg,
+    description: '味亦美秉持著不變的初衷，堅持品質、照顧分店、照顧員工、良心賺錢、回饋社會，一步一腳印的向未來邁進。',
+    category: '餐飲服務',
+    website: 'https://www.facebook.com/wim.tw?locale=zh_TW'
+  },
+  {
+    id: 7,
+    name: '東和食品',
+    logo: howmamaImg,
+    description: '東和食品創立於西元1965年3月，原先以生產農產品外銷，包括蜜柑，竹筍，蘆筍、洋菇等罐頭，接著加入水產罐頭製造，是首創國內以水產罐頭多樣化產品銷售國外市場之先例。',
+    category: '食品製造商',
+    website: 'https://www.how-mama.com.tw/?rcode=HZDAUM3H'
+  },
+  {
+    id: 8,
+    name: '鮮大王',
+    logo: freshKingImg,
+    description: '“家有鮮大王，清水變雞湯”是我公司希望提供好的產品，讓您的美食更俱色、香、味，同時也讓您的好廚藝更加突出。',
+    category: '食品製造商',
+    website: 'http://www.freshking.com.tw/default.asp'
   }
 ];
 
