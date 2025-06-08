@@ -42,13 +42,13 @@
         <div class="mb-16">
           <div class="flex flex-col md:flex-row items-center gap-8 max-w-4xl mx-auto">
             <div class="w-48 h-48 overflow-hidden rounded-full border-4 border-red-100 shadow-lg flex-shrink-0">
-              <img src="../assets/male_icon.png" alt="秘書長" class="w-full h-full object-cover">
+              <img src="../assets/chiefOfStaff.jpg" alt="秘書長" class="w-full h-full object-cover">
             </div>
             <div>
               <h3 class="text-xl font-bold text-gray-800 mb-2">蕭雅梅</h3>
               <p class="text-red-600 font-medium mb-4">秘書長</p>
               <p class="text-gray-600 leading-relaxed">
-                蕭雅梅女士現任XX集團有限公司董事長，在行業內擁有超過30年的豐富經驗。她於20xx年當選為協會第x屆理事長，致力於推動行業技術創新和國際化發展。
+                少點鹽健康餐盒創辦人，10間直營門市，聚焦健康飲食、永續經營，推動多品牌共創與人才孵化。
               </p>
             </div>
           </div>
