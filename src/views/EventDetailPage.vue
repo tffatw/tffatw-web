@@ -123,19 +123,13 @@
                       <svg class="w-5 h-5 text-gray-600 mt-1 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
                       </svg>
-                      <span class="text-gray-700">activites@association.org</span>
+                      <span class="text-gray-700">tffatw.org@gmail.com</span>
                     </div>
                     <div class="flex items-start">
                       <svg class="w-5 h-5 text-gray-600 mt-1 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
-                      <span class="text-gray-700">(+886) 10-12345678</span>
-                    </div>
-                    <div class="flex items-start">
-                      <svg class="w-5 h-5 text-gray-600 mt-1 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                      </svg>
-                      <span class="text-gray-700">李女士 (活動專員)</span>
+                      <span class="text-gray-700">0912-272-684</span>
                     </div>
                   </div>
                 </div>
@@ -176,12 +170,12 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, watch } from 'vue';
 import { useRoute } from 'vue-router';
 import { eventService } from '../services/eventService';
 
 const route = useRoute();
-const eventId = route.params.id;
+const eventId = ref(route.params.id);
 
 const loading = ref(true);
 const event = ref(null);
@@ -201,18 +195,22 @@ const getStatusBadgeClass = (status) => {
   }
 };
 
-onMounted(() => {
-  // 使用 setTimeout 模擬 API 延遲
+// 监听路由变化
+watch(() => route.params.id, (newId) => {
+  eventId.value = newId;
+  fetchData();
+});
+
+const fetchData = () => {
+  loading.value = true;
   setTimeout(() => {
-    // 獲取事件數據
-    event.value = eventService.getEventById(eventId);
-    
-    // 如果找到了事件，獲取相關事件
+    event.value = eventService.getEventById(eventId.value);
     if (event.value) {
-      relatedEvents.value = eventService.getRelatedEvents(eventId, 3);
+      relatedEvents.value = eventService.getRelatedEvents(eventId.value, 3);
     }
-    
     loading.value = false;
   }, 300);
-});
-</script> 
+};
+
+onMounted(fetchData);
+</script>

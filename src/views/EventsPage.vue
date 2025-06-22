@@ -150,29 +150,6 @@ const eventCategories = [
   { label: '參訪活動', value: '參訪活動' }
 ];
 
-// 活動數據
-const events = [
-  {
-    id: 1,
-    title: '2023年度行業發展趨勢峰會',
-    date: '2023-06-15',
-    location: '國際會議中心',
-    category: '會議論壇',
-    image: '/event-1.jpg',
-    description: '本次峰會將邀請行業頂尖專家，共同探討行業未來發展趨勢、技術創新方向以及政策影響。',
-    featured: true
-  }
-];
-
-// 活動圖片畫廊
-const gallery = [
-  { src: '/event-1.jpg', alt: '行業峰會現場', featured: true },
-  { src: '/event-2.jpg', alt: '工作坊培訓' },
-  { src: '/event-3.jpg', alt: '企業交流活動' },
-  { src: '/event-4.jpg', alt: '簽約儀式' },
-  { src: '/event-5.jpg', alt: '專題研討會' }
-];
-
 // 搜尋和篩選
 const searchQuery = ref('');
 const currentCategory = ref('all');
