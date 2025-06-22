@@ -15,7 +15,7 @@
           <h2 class="text-3xl font-bold text-gray-800 mb-4">本屆理事會</h2>
           <div class="w-20 h-1 bg-red-600 mx-auto mb-4"></div>
           <p class="text-gray-600 max-w-2xl mx-auto">
-            第X屆理事會成員由行業內著名企業領導和專業人士組成，任期20xx年至20xx年
+            第21屆理事會成員由行業內著名企業領導和專業人士組成
           </p>
         </div>
         
@@ -23,16 +23,13 @@
         <div class="mb-16">
           <div class="flex flex-col md:flex-row items-center gap-8 max-w-4xl mx-auto">
             <div class="w-64 h-64 overflow-hidden rounded-full border-4 border-red-100 shadow-lg flex-shrink-0">
-              <img src="../assets/male_icon.png" alt="理事長" class="w-full h-full object-cover">
+              <img src="../assets/chief.jpg" alt="理事長" class="w-full h-full object-cover">
             </div>
             <div>
               <h3 class="text-2xl font-bold text-gray-800 mb-2">蔡思庭</h3>
               <p class="text-red-600 font-medium mb-4">理事長</p>
               <p class="text-gray-600 mb-4 leading-relaxed">
-                蔡思庭先生現任XX集團有限公司董事長，在行業內擁有超過30年的豐富經驗。他於20xx年當選為協會第x屆理事長，致力於推動行業技術創新和國際化發展。
-              </p>
-              <p class="text-gray-600 leading-relaxed">
-                在他的領導下，協會積極推動行業標準制定，促進企業間合作，為行業持續健康發展作出重要貢獻。
+                酷斯拉咖啡執行長、紅橘子早午餐連鎖創辦人、愛現貓烘焙總經理、天天蛋餅飯糰顧問、天天韓式炙燒鍋顧問。
               </p>
             </div>
           </div>
@@ -42,7 +39,7 @@
         <div class="mb-16">
           <div class="flex flex-col md:flex-row items-center gap-8 max-w-4xl mx-auto">
             <div class="w-48 h-48 overflow-hidden rounded-full border-4 border-red-100 shadow-lg flex-shrink-0">
-              <img src="../assets/chiefOfStaff.jpg" alt="秘書長" class="w-full h-full object-cover">
+              <img src="../assets/chiefOfStaff.jpg" alt="秘書長" class="w-full h-full object-cover object-top">
             </div>
             <div>
               <h3 class="text-xl font-bold text-gray-800 mb-2">蕭雅梅</h3>
