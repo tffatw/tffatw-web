@@ -151,4 +151,20 @@
       </div>
     </section>
   </div>
-</template> 
+</template>
+
+<script setup>
+import { onMounted } from 'vue'
+import { useSEO } from '../composables/useSEO'
+
+const { setPageMeta } = useSEO()
+
+onMounted(() => {
+  setPageMeta({
+    title: '關於我們',
+    description: '了解台灣速食餐飲協會的歷史、使命和願景。本協會致力於促進速食連鎖加盟事業健全發展，提供會員教育講習、海外市場經營資訊等專業服務。',
+    keywords: '台灣速食餐飲協會,關於我們,協會歷史,使命願景,速食餐飲,連鎖加盟,行業發展',
+    ogImage: 'https://yourdomain.com/src/assets/logo.jpg'
+  })
+})
+</script> 

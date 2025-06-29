@@ -103,6 +103,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 import { eventService } from '../services/eventService';
+import { useSEO } from '../composables/useSEO';
 
 import welcome from '../assets/welcome.svg';
 import welcome2 from '../assets/welcome2.svg';
@@ -143,9 +144,18 @@ const startSlideShow = () => {
   }, 5000);
 };
 
+const { setPageMeta } = useSEO();
+
 onMounted(() => {
   startSlideShow();
   featuredEvents.value = eventService.getFeaturedEvents(3);
+  
+  setPageMeta({
+    title: '首頁',
+    description: '台灣速食餐飲協會官方網站 - 促進速食連鎖加盟事業健全發展，提供會員教育講習、海外市場經營資訊、供應鏈輔導諮詢等專業服務',
+    keywords: '台灣速食餐飲協會,速食,餐飲,連鎖加盟,早餐,快餐,行業協會,會員服務,餐飲管理',
+    ogImage: 'https://yourdomain.com/src/assets/logo.jpg'
+  });
 });
 
 onUnmounted(() => {
