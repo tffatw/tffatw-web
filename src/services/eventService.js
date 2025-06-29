@@ -2,6 +2,7 @@ import eventsData from '../data/events.json';
 
 // 導入所有事件圖片
 import event1Img from '../assets/event1.jpg';
+import event2Img from '../assets/20250515_activity.jpg';
 // import event2Img from '../assets/event2.jpg';
 // import event3Img from '../assets/event3.jpg';
 // import event4Img from '../assets/event4.jpg';
@@ -11,7 +12,7 @@ import event1Img from '../assets/event1.jpg';
 // 圖片映射表
 const eventImages = {
   '/src/assets/event1.jpg': event1Img,
-//   '/src/assets/event2.jpg': event2Img,
+  '/src/assets/event2.jpg': event2Img,
 //   '/src/assets/event3.jpg': event3Img,
 //   '/src/assets/event4.jpg': event4Img,
 //   '/src/assets/event5.jpg': event5Img,
