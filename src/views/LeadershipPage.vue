@@ -29,7 +29,7 @@
               <h3 class="text-2xl font-bold text-gray-800 mb-2">蔡思庭</h3>
               <p class="text-red-600 font-medium mb-4">理事長</p>
               <p class="text-gray-600 mb-4 leading-relaxed">
-                酷斯拉咖啡執行長、紅橘子早午餐連鎖創辦人、愛現貓烘焙總經理、天天蛋餅飯糰顧問、天天韓式炙燒鍋顧問。
+                酷斯拉咖啡執行長、紅橘子早午餐連鎖創辦人、愛餡貓烘焙總經理、天天蛋餅飯糰顧問、天天韓式炙燒鍋顧問。
               </p>
             </div>
           </div>
