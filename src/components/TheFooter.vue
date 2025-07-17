@@ -65,7 +65,7 @@
       
       <!-- 版權資訊 -->
       <div class="mt-8 pt-6 border-t border-gray-700 text-center text-sm">
-        <p>&copy; {{ new Date().getFullYear() }} 協會官網. 保留所有權利.</p>
+        <p>&copy; {{ new Date().getFullYear() }} 台灣速食餐飲協會. 保留所有權利.</p>
       </div>
     </div>
   </footer>
