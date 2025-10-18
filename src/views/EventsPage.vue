@@ -73,24 +73,28 @@
             class="card overflow-hidden group"
           >
             <!-- 活動圖片 -->
-            <div class="relative overflow-hidden">
-              <img :src="event.image" :alt="event.title" class="w-full h-52 object-cover transition duration-500 group-hover:scale-105">
-              <div class="absolute top-4 left-4">
-                <span class="inline-block bg-red-600 text-white text-sm font-semibold px-3 py-1 rounded">{{ event.category }}</span>
-              </div>
-              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                <div class="flex items-center text-white">
-                  <svg class="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                  <span>{{ event.date }}</span>
+            <router-link :to="`/events/${event.id}`">
+              <div class="relative overflow-hidden">
+                <img :src="event.image" :alt="event.title" class="w-full h-52 object-cover transition duration-500 group-hover:scale-105">
+                <div class="absolute top-4 left-4">
+                  <span class="inline-block bg-red-600 text-white text-sm font-semibold px-3 py-1 rounded">{{ event.type }}</span>
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                  <div class="flex items-center text-white">
+                    <svg class="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                    <span>{{ event.date }}</span>
+                  </div>
                 </div>
               </div>
-            </div>
+            </router-link>
             
             <!-- 活動內容 -->
             <div class="p-6">
-              <h3 class="text-xl font-semibold text-gray-800 mb-3 line-clamp-2">{{ event.title }}</h3>
+              <router-link :to="`/events/${event.id}`">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3 line-clamp-2 transition-colors hover:text-red-600">{{ event.title }}</h3>
+              </router-link>
               <p class="text-gray-600 mb-4 line-clamp-3">{{ event.description }}</p>
               <div class="flex items-center justify-between">
                 <div class="flex items-center text-sm text-gray-500">
@@ -214,6 +218,6 @@ const displayedPages = computed(() => {
 });
 
 onMounted(() => {
-  featuredEvents.value = eventService.getFeaturedEvents(0);
+  featuredEvents.value = eventService.getAllEvents();
 });
 </script>

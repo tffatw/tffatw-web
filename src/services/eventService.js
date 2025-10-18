@@ -34,7 +34,17 @@ export const eventService = {
    * @returns {Array} 所有事件數據
    */
   getAllEvents() {
-    return processedEvents;
+    // Helper function to parse the Chinese date string
+    const parseDate = (dateString) => {
+      const [year, month, day] = dateString.match(/\d+/g).map(Number);
+      return new Date(year, month - 1, day);
+    };
+
+    return processedEvents.slice().sort((a, b) => {
+      const dateA = parseDate(a.date);
+      const dateB = parseDate(b.date);
+      return dateB - dateA; // Sort descending (newest first)
+    });
   },
 
   /**
