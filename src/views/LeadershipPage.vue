@@ -79,13 +79,13 @@
             >
               <img
                 src="../assets/deputyChiefOfStaff.png"
-                alt="副秘書長"
+                alt="教育顧問"
                 class="w-full h-full object-cover object-top"
               />
             </div>
             <div>
               <h3 class="text-xl font-bold text-gray-800 mb-2">Leo</h3>
-              <p class="text-red-600 font-medium mb-4">教育顧問、副秘書長</p>
+              <p class="text-red-600 font-medium mb-4">教育顧問</p>
               <p class="text-gray-600 leading-relaxed">
                 團隊打造、企業行銷、流量變現、創業諮詢、廣告投放
               </p>
