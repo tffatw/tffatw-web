@@ -147,6 +147,8 @@ import maleIconImg from '../assets/male_icon.png';
 import wimImg from '../assets/wim.jpg';
 import howmamaImg from '../assets/howmama.jpg';
 import freshKingImg from '../assets/freshking.jpg';
+import gigaFoodsImg from '../assets/giga_foods.png';
+import lechefImg from '../assets/lechef.png';
 
 // 理事會成員數據
 const boardMembers = [
@@ -245,9 +247,25 @@ const brands = [
     id: 8,
     name: '鮮大王',
     logo: freshKingImg,
-    description: '“家有鮮大王，清水變雞湯”是我公司希望提供好的產品，讓您的美食更俱色、香、味，同時也讓您的好廚藝更加突出。',
+    description: '家有鮮大王，清水變雞湯”是我公司希望提供好的產品，讓您的美食更俱色、香、味，同時也讓您的好廚藝更加突出。',
     category: '食品製造商',
     website: 'http://www.freshking.com.tw/default.asp'
+  },
+  {
+    id: 9,
+    name: '展安食品',
+    logo: gigaFoodsImg,
+    description: '成立於 2013 年，遵循創始初心，於食品業界奠定高品質定位。 食物，是不可或缺的養分來源，更是提供幸福感的靈魂角色，展安堅持以頂級設備及廚藝搭配新鮮、健康、營養的當季食材烹飪出能夠感動您的料理。',
+    category: '食品製造商',
+    website: 'https://www.gigafoods.com.tw/'
+  },
+  {
+    id: 10,
+    name: '樂廚',
+    logo: lechefImg,
+    description: '創造健康樂活Time, 享受簡單輕鬆 Diy 料理',
+    category: '食品製造商',
+    website: 'https://www.lechef.tw/'
   }
 ];
 
