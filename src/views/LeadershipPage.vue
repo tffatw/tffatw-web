@@ -17,7 +17,7 @@
           <h2 class="text-3xl font-bold text-gray-800 mb-4">本屆理事會</h2>
           <div class="w-20 h-1 bg-red-600 mx-auto mb-4"></div>
           <p class="text-gray-600 max-w-2xl mx-auto">
-            第21屆理事會成員由行業內著名企業領導和專業人士組成
+            第十一屆理事會成員由行業內著名企業領導和專業人士組成
           </p>
         </div>
 
@@ -268,7 +268,7 @@ const pastChairmen = [
     image: maleIconImg,
   },
   {
-    name: "徐倉賓",
+    name: "許倉賓",
     term: "第一屆副理事長",
     period: "2000-2004",
     company: "弘爺國際企業股份有限公司",
@@ -283,7 +283,7 @@ const pastChairmen = [
   },
   {
     name: "陳筑怜",
-    term: "第二屆理事長",
+    term: "第二屆副理事長",
     period: "2004-2008",
     company: "齋聖彥有限公司",
     image: maleIconImg,
@@ -311,7 +311,7 @@ const pastChairmen = [
   },
   {
     name: "莊茂山",
-    term: "第九屆理事長",
+    term: "第九,十屆理事長",
     period: "2008-2015",
     company: "吉得堡食品有限公司",
     image: maleIconImg,
