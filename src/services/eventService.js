@@ -3,7 +3,7 @@ import eventsData from '../data/events.json';
 // 導入所有事件圖片
 import event1Img from '../assets/event1.jpg';
 import event2Img from '../assets/20250515_activity.jpg';
-// import event2Img from '../assets/event2.jpg';
+import event3Img from '../assets/event3.jpg';
 // import event3Img from '../assets/event3.jpg';
 // import event4Img from '../assets/event4.jpg';
 // import event5Img from '../assets/event5.jpg';
@@ -13,10 +13,10 @@ import event2Img from '../assets/20250515_activity.jpg';
 const eventImages = {
   '/src/assets/event1.jpg': event1Img,
   '/src/assets/event2.jpg': event2Img,
-//   '/src/assets/event3.jpg': event3Img,
-//   '/src/assets/event4.jpg': event4Img,
-//   '/src/assets/event5.jpg': event5Img,
-//   '/src/assets/event6.jpg': event6Img
+  '/src/assets/event3.jpg': event3Img,
+  //   '/src/assets/event4.jpg': event4Img,
+  //   '/src/assets/event5.jpg': event5Img,
+  //   '/src/assets/event6.jpg': event6Img
 };
 
 // 處理事件數據，轉換圖片路徑
@@ -72,7 +72,7 @@ export const eventService = {
    * @returns {Array} 即將舉辦的事件數據
    */
   getUpcomingEvents(limit = 0) {
-    const upcoming = processedEvents.filter(event => 
+    const upcoming = processedEvents.filter(event =>
       event.status === '報名中' || event.status === '籌備中'
     );
     return limit > 0 ? upcoming.slice(0, limit) : upcoming;
