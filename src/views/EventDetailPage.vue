@@ -77,7 +77,24 @@
               <h2 class="text-2xl font-bold text-gray-800 mb-6">活動詳情</h2>
               
               <!-- 活動圖片 -->
-              <div class="mb-8">
+              <div class="mb-8" v-if="event.images && event.images.length > 0">
+                <!-- Main Image -->
+                <div class="mb-4">
+                  <img :src="currentImage" :alt="event.title" class="w-full h-auto rounded-lg shadow-md object-cover aspect-video">
+                </div>
+                <!-- Thumbnails -->
+                <div class="flex overflow-x-auto space-x-2 pb-2">
+                  <div 
+                    v-for="(img, index) in event.images" 
+                    :key="index"
+                    @click="currentImage = img"
+                    :class="['cursor-pointer border-2 rounded-md overflow-hidden transition-all w-24 h-24 flex-shrink-0', currentImage === img ? 'border-red-500' : 'border-transparent hover:border-red-300']"
+                  >
+                    <img :src="img" :alt="`${event.title} thumbnail ${index + 1}`" class="w-full h-full object-cover">
+                  </div>
+                </div>
+              </div>
+              <div v-else class="mb-8">
                 <img :src="event.image" :alt="event.title" class="w-full h-auto rounded-lg shadow-md">
               </div>
               
@@ -180,6 +197,7 @@ const eventId = ref(route.params.id);
 const loading = ref(true);
 const event = ref(null);
 const relatedEvents = ref([]);
+const currentImage = ref(null);
 
 // 狀態徽章樣式
 const getStatusBadgeClass = (status) => {
@@ -207,6 +225,11 @@ const fetchData = () => {
     event.value = eventService.getEventById(eventId.value);
     if (event.value) {
       relatedEvents.value = eventService.getRelatedEvents(eventId.value, 3);
+      if (event.value.images && event.value.images.length > 0) {
+        currentImage.value = event.value.images[0];
+      } else {
+        currentImage.value = event.value.image;
+      }
     }
     loading.value = false;
   }, 300);

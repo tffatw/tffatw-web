@@ -1,30 +1,5 @@
 import eventsData from '../data/events.json';
 
-// 導入所有事件圖片
-import event1Img from '../assets/event1.jpg';
-import event2Img from '../assets/20250515_activity.jpg';
-import event3Img from '../assets/event3.jpg';
-// import event3Img from '../assets/event3.jpg';
-// import event4Img from '../assets/event4.jpg';
-// import event5Img from '../assets/event5.jpg';
-// import event6Img from '../assets/event6.jpg';
-
-// 圖片映射表
-const eventImages = {
-  '/src/assets/event1.jpg': event1Img,
-  '/src/assets/event2.jpg': event2Img,
-  '/src/assets/event3.jpg': event3Img,
-  //   '/src/assets/event4.jpg': event4Img,
-  //   '/src/assets/event5.jpg': event5Img,
-  //   '/src/assets/event6.jpg': event6Img
-};
-
-// 處理事件數據，轉換圖片路徑
-const processedEvents = eventsData.map(event => ({
-  ...event,
-  image: eventImages[event.image] || event.image
-}));
-
 /**
  * 事件服務 - 提供獲取事件數據的方法
  */
@@ -40,7 +15,7 @@ export const eventService = {
       return new Date(year, month - 1, day);
     };
 
-    return processedEvents.slice().sort((a, b) => {
+    return eventsData.slice().sort((a, b) => {
       const dateA = parseDate(a.date);
       const dateB = parseDate(b.date);
       return dateB - dateA; // Sort descending (newest first)
@@ -53,7 +28,7 @@ export const eventService = {
    * @returns {Object|null} 事件對象，若未找到則返回null
    */
   getEventById(id) {
-    return processedEvents.find(event => event.id === id) || null;
+    return eventsData.find(event => event.id === id) || null;
   },
 
   /**
@@ -62,7 +37,19 @@ export const eventService = {
    * @returns {Array} 精選事件數據
    */
   getFeaturedEvents(limit = 0) {
-    const featured = processedEvents.filter(event => event.featured);
+    const parseDate = (dateString) => {
+      const [year, month, day] = dateString.match(/\d+/g).map(Number);
+      return new Date(year, month - 1, day);
+    };
+
+    const featured = eventsData
+      .filter(event => event.featured)
+      .sort((a, b) => {
+        const dateA = parseDate(a.date);
+        const dateB = parseDate(b.date);
+        return dateB - dateA; // Sort descending (newest first)
+      });
+
     return limit > 0 ? featured.slice(0, limit) : featured;
   },
 
@@ -72,7 +59,7 @@ export const eventService = {
    * @returns {Array} 即將舉辦的事件數據
    */
   getUpcomingEvents(limit = 0) {
-    const upcoming = processedEvents.filter(event =>
+    const upcoming = eventsData.filter(event =>
       event.status === '報名中' || event.status === '籌備中'
     );
     return limit > 0 ? upcoming.slice(0, limit) : upcoming;
@@ -85,7 +72,7 @@ export const eventService = {
    * @returns {Array} 相關事件數據
    */
   getRelatedEvents(currentEventId, limit = 3) {
-    return processedEvents
+    return eventsData
       .filter(event => event.id !== currentEventId)
       .slice(0, limit);
   },
@@ -96,6 +83,6 @@ export const eventService = {
    * @returns {Array} 符合狀態的事件數據
    */
   getEventsByStatus(status) {
-    return processedEvents.filter(event => event.status === status);
+    return eventsData.filter(event => event.status === status);
   }
 }; 
