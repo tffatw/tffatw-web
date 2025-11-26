@@ -18,28 +18,7 @@
             :alt="slide.title"
             class="w-full h-full object-cover"
           />
-          <div
-            class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center p-4"
-          >
-            <div
-              class="text-center text-white max-w-4xl"
-              :style="{
-                paddingLeft: slide.textPosition === 'right' ? '500px' : '0',
-                paddingRight: slide.textPosition === 'left' ? '500px' : '0',
-              }"
-            >
-              <h2 class="text-3xl md:text-5xl font-bold mb-4">
-                {{ slide.title }}
-              </h2>
-              <p class="text-xl md:text-2xl mb-6">{{ slide.description }}</p>
-              <router-link
-                :to="slide.link"
-                class="px-6 py-3 bg-[#e0725f] text-white rounded-md hover:bg-[#d06050] transition-colors"
-              >
-                了解更多
-              </router-link>
-            </div>
-          </div>
+
         </div>
 
         <!-- 輪播圖控制按鈕 -->
@@ -171,31 +150,34 @@ import { ref, onMounted, onUnmounted } from "vue";
 import { eventService } from "../services/eventService";
 import { useSEO } from "../composables/useSEO";
 
-import welcome from "../assets/welcome.svg";
-import welcome2 from "../assets/welcome2.svg";
-import welcome3 from "../assets/welcome3.svg";
-
 // 輪播圖數據
 const slides = [
   {
     title: "台灣速食餐飲協會",
     description: "我們致力於促進行業交流與合作，推動行業健康發展",
-    image: welcome,
+    image: "/images/homepage/1.png",
     link: "/about",
     textPosition: "right",
   },
   {
     title: "專業的行業支持",
     description: "為會員提供全方位的專業諮詢和支持服務",
-    image: welcome2,
+    image: "/images/homepage/2.png",
     link: "/services",
     textPosition: "right",
   },
   {
     title: "定期舉辦行業活動",
     description: "研討會、培訓課程、社交活動等多種形式的專業交流",
-    image: welcome3,
+    image: "/images/homepage/3.png",
     link: "/events",
+    textPosition: "left",
+  },
+  {
+    title: "新會員招募",
+    description: "歡迎新成員加入我們，共同開創速食餐飲業新篇章",
+    image: "/images/homepage/4.png",
+    link: "/contact",
     textPosition: "left",
   },
 ];
