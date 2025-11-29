@@ -3,7 +3,7 @@
     <!-- 輪播圖部分 -->
     <section class="relative">
       <div
-        class="carousel-container relative overflow-hidden h-[500px] md:h-[600px]"
+        class="carousel-container relative overflow-hidden aspect-[4/3] md:aspect-[3/1]"
       >
         <div
           v-for="(slide, index) in slides"
@@ -18,7 +18,6 @@
             :alt="slide.title"
             class="w-full h-full object-cover"
           />
-
         </div>
 
         <!-- 輪播圖控制按鈕 -->

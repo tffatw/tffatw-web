@@ -99,7 +99,15 @@
               </div>
               
               <!-- 活動詳細介紹 -->
-              <div class="prose max-w-none" v-html="event.detailContent"></div>
+              <div class="prose max-w-none">
+                <template v-for="(block, index) in event.contentBlocks" :key="index">
+                  <h3 v-if="block.type === 'heading'" :class="`text-xl font-bold mt-6 mb-3`">{{ block.content }}</h3>
+                  <p v-else-if="block.type === 'paragraph'" :class="{ 'font-bold': block.bold }" class="mb-4">{{ block.content }}</p>
+                  <ul v-else-if="block.type === 'list'" class="list-disc pl-6 mb-4">
+                    <li v-for="(item, itemIndex) in block.items" :key="itemIndex">{{ item }}</li>
+                  </ul>
+                </template>
+              </div>
             </div>
             
             <!-- 側邊欄 -->
