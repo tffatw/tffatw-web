@@ -203,11 +203,9 @@
                   </h3>
                   <p
                     v-else-if="block.type === 'paragraph'"
-                    :class="{ 'font-bold': block.bold }"
                     class="mb-4"
-                  >
-                    {{ block.content }}
-                  </p>
+                    v-html="block.content"
+                  ></p>
                   <ul
                     v-else-if="block.type === 'list'"
                     class="list-disc pl-6 mb-4"

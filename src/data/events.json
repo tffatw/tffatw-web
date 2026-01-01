@@ -9,23 +9,40 @@
     "address": "新北產業園區五工路66號2樓",
     "description": "台灣速食餐飲連鎖協會謹訂114年2月13日星期四18:00於海大王時尚喜宴廣場舉辦會員春酒宴，廣邀餐飲品牌總部、食品加工廠、行銷策略公司的企業主/主管參加。",
     "contentBlocks": [
-      { "type": "paragraph", "content": "100家餐飲企業總部立案至今屆滿20年的～" },
-      { "type": "heading", "level": 3, "content": "台灣速食餐飲連鎖協會" },
-      { "type": "paragraph", "content": "謹訂114年2月13日星期四18:00於海大王時尚喜宴廣場(新北產業園區五工路66號2樓)。" },
-      { "type": "paragraph", "content": "廣邀💌～" },
-      { 
-        "type": "list",
-        "items": [
-          "🔥餐飲品牌總部",
-          "🔥食品加工廠",
-          "🔥行銷策略公司"
-        ] 
+      {
+        "type": "paragraph",
+        "content": "100家餐飲企業總部立案至今屆滿20年的～"
       },
-      { "type": "paragraph", "content": "符合以上企業主/主管歡迎👏報名參加會員春酒宴～" },
-      { "type": "paragraph", "content": "1000元/位", "bold": true },
-      { "type": "paragraph", "content": "#台灣速食餐飲連鎖#", "bold": true },
-      { "type": "paragraph", "content": "#企業會員招募#", "bold": true },
-      { "type": "paragraph", "content": "#限額##2月7日前#", "bold": true }
+      { "type": "heading", "level": 3, "content": "台灣速食餐飲連鎖協會" },
+      {
+        "type": "paragraph",
+        "content": "謹訂114年2月13日星期四18:00於海大王時尚喜宴廣場(新北產業園區五工路66號2樓)。"
+      },
+      { "type": "paragraph", "content": "廣邀💌～" },
+      {
+        "type": "list",
+        "items": ["🔥餐飲品牌總部", "🔥食品加工廠", "🔥行銷策略公司"]
+      },
+      {
+        "type": "paragraph",
+        "content": "符合以上企業主/主管歡迎👏報名參加會員春酒宴～"
+      },
+      {
+        "type": "paragraph",
+        "content": "<strong>1000元/位</strong>"
+      },
+      {
+        "type": "paragraph",
+        "content": "<strong>#台灣速食餐飲連鎖#</strong>"
+      },
+      {
+        "type": "paragraph",
+        "content": "<strong>#企業會員招募#</strong>"
+      },
+      {
+        "type": "paragraph",
+        "content": "<strong>#限額##2月7日前#</strong>"
+      }
     ],
     "image": "/activity/20250213/20250213_activity_1.jpg",
     "images": [
@@ -62,10 +79,20 @@
     "contentBlocks": [
       { "type": "heading", "level": 3, "content": "台灣速食餐飲連鎖協會" },
       { "type": "paragraph", "content": "初夏薰風、綠槐高柳❤️" },
-      { "type": "paragraph", "content": "謹訂5月15日星期四18:00於🌲青青食尚花園會館🌲" },
-      { "type": "paragraph", "content": "召開第十一屆第二次理監事及月例餐會，會後並享美食盛宴。" },
+      {
+        "type": "paragraph",
+        "content": "謹訂5月15日星期四18:00於🌲青青食尚花園會館🌲"
+      },
+      {
+        "type": "paragraph",
+        "content": "召開第十一屆第二次理監事及月例餐會，會後並享美食盛宴。"
+      },
       { "type": "paragraph", "content": "談商情論時勢，分享經營心得。" },
-      { "type": "paragraph", "content": "會員携伴一人免費，其他與會貴賓贊助餐費一千元。", "bold": true }
+      {
+        "type": "paragraph",
+        "content": "會員携伴一人免費，其他與會貴賓贊助餐費一千元。",
+        "bold": true
+      }
     ],
     "image": "/activity/20250515/20250515_activity_1.jpg",
     "images": [],
@@ -83,12 +110,27 @@
     "description": "謹訂於114年7月22號(星期二)舉辦中南部地區月例會-參訪一日遊,敬請所有會員踴躍參加。",
     "contentBlocks": [
       { "type": "heading", "level": 3, "content": "活動內容：" },
-      { "type": "paragraph", "content": "謹訂於114年7月22號(星期二)舉辦中南部地區月例會-參訪一日遊,敬請所有會員踴躍參加。" },
+      {
+        "type": "paragraph",
+        "content": "謹訂於114年7月22號(星期二)舉辦中南部地區月例會-參訪一日遊,敬請所有會員踴躍參加。"
+      },
       { "type": "heading", "level": 3, "content": "活動花絮：" },
-      { "type": "paragraph", "content": "台灣速食餐飲協會於 114年7月22日（星期二） 舉辦了中南部地區月例會暨參訪一日遊，本次特別前往「大成長城嘉義新廠」進行交流與參觀。" },
-      { "type": "paragraph", "content": "活動當天從台北及台中兩地出發，會員們精神飽滿地搭乘專車前往嘉義鹿草。抵達大成長城新廠後，在公司專業團隊的帶領下，大家深入了解廠區設施與生產流程，感受企業在食品安全、環保永續及創新技術上的用心。" },
-      { "type": "paragraph", "content": "午餐時間由大成長城熱情招待，豐富的佳餚讓大家讚不絕口。會員們在輕鬆愉快的氣氛中交流分享，彼此交換寶貴的餐飲經驗與產業見解。" },
-      { "type": "paragraph", "content": "整個行程充滿溫馨與笑聲，不僅增進了會員間的情誼，也讓大家對國內優質素食產業的發展有更深一層的了解。" }
+      {
+        "type": "paragraph",
+        "content": "台灣速食餐飲協會於 114年7月22日（星期二） 舉辦了中南部地區月例會暨參訪一日遊，本次特別前往「大成長城嘉義新廠」進行交流與參觀。"
+      },
+      {
+        "type": "paragraph",
+        "content": "活動當天從台北及台中兩地出發，會員們精神飽滿地搭乘專車前往嘉義鹿草。抵達大成長城新廠後，在公司專業團隊的帶領下，大家深入了解廠區設施與生產流程，感受企業在食品安全、環保永續及創新技術上的用心。"
+      },
+      {
+        "type": "paragraph",
+        "content": "午餐時間由大成長城熱情招待，豐富的佳餚讓大家讚不絕口。會員們在輕鬆愉快的氣氛中交流分享，彼此交換寶貴的餐飲經驗與產業見解。"
+      },
+      {
+        "type": "paragraph",
+        "content": "整個行程充滿溫馨與笑聲，不僅增進了會員間的情誼，也讓大家對國內優質素食產業的發展有更深一層的了解。"
+      }
     ],
     "image": "/activity/20250722/20250722_activity_1.jpg",
     "images": [
@@ -110,27 +152,81 @@
     "description": "謹訂於114年10月15號(星期三)舉辦例會",
     "contentBlocks": [
       { "type": "heading", "level": 3, "content": "活動內容：" },
-      { "type": "paragraph", "content": "🌲海大王時尚喜宴廣場(新北產業園區五工路66號2樓)" },
-      { "type": "paragraph", "content": "🎈召開第十一屆第四次會月例會暨致赠莊前理事長卸任紀念品" },
-      { "type": "paragraph", "content": "🎈歡迎知名品牌與會嘉賓「食尚玩家，火山雞排，吉品食品，荃富貿易，良晟食品」" },
-      { "type": "paragraph", "content": "🎈🥤LIM TEH時尚飲品提供🥤，秘書長新品上市，會員搶先體驗嚐鮮👍！" },
-      { "type": "paragraph", "content": "🎈「酒醒只在花前坐，酒醉還來花下眠。 」金門高粱～中秋限定版大家來品嚐。" },
+      {
+        "type": "paragraph",
+        "content": "🌲海大王時尚喜宴廣場(新北產業園區五工路66號2樓)"
+      },
+      {
+        "type": "paragraph",
+        "content": "🎈召開第十一屆第四次會月例會暨致赠莊前理事長卸任紀念品"
+      },
+      {
+        "type": "paragraph",
+        "content": "🎈歡迎知名品牌與會嘉賓「食尚玩家，火山雞排，吉品食品，荃富貿易，良晟食品」"
+      },
+      {
+        "type": "paragraph",
+        "content": "🎈🥤LIM TEH時尚飲品提供🥤，秘書長新品上市，會員搶先體驗嚐鮮👍！"
+      },
+      {
+        "type": "paragraph",
+        "content": "🎈「酒醒只在花前坐，酒醉還來花下眠。 」金門高粱～中秋限定版大家來品嚐。"
+      },
       { "type": "heading", "level": 3, "content": "活動花絮：" },
-      { "type": "paragraph", "content": "台灣速食餐飲協會於 **2025年** 舉辦了 **第十一屆第四次月例會暨會員聚餐** 🎉" },
-      { "type": "paragraph", "content": "活動地點選在氣氛雅緻的 **海大王時尚喜宴廣場**，現場賓客雲集、熱鬧非凡，笑聲不斷！😄✨" },
-      { "type": "paragraph", "content": "🎊 本次例會特別進行了 **莊前理事長卸任紀念品致贈儀式**，" },
-      { "type": "paragraph", "content": "全場以熱烈掌聲👏 感謝理事長多年來的奉獻與領導，氣氛溫馨又感人💐。" },
-      { "type": "paragraph", "content": "🤝 我們也榮幸邀請多家知名品牌嘉賓蒞臨現場：" },
-      { "type": "paragraph", "content": "**食尚玩家、火山雞排、吉品食品、荃富貿易、良晟食品** 等，" },
-      { "type": "paragraph", "content": "一同見證協會的成長與產業交流的美好時刻！🌱" },
-      { "type": "paragraph", "content": "🍹 活動中由 **LIM TEH時尚飲品** 提供特製飲品，" },
-      { "type": "paragraph", "content": "秘書長更親自介紹新品，讓會員搶先體驗嚐鮮～讚聲連連！👍💬" },
-      { "type": "paragraph", "content": "🥂 最後，大家一同品嚐 **金門高粱中秋限定版**，" },
-      { "type": "paragraph", "content": "「酒醒只在花前坐，酒醉還來花下眠。」" },
-      { "type": "paragraph", "content": "在微醺與歡笑中為這場聚會畫下完美句點🌕🌸" },
+      {
+        "type": "paragraph",
+        "content": "台灣速食餐飲協會於 **2025年** 舉辦了 **第十一屆第四次月例會暨會員聚餐** 🎉"
+      },
+      {
+        "type": "paragraph",
+        "content": "活動地點選在氣氛雅緻的 **海大王時尚喜宴廣場**，現場賓客雲集、熱鬧非凡，笑聲不斷！😄✨"
+      },
+      {
+        "type": "paragraph",
+        "content": "🎊 本次例會特別進行了 **莊前理事長卸任紀念品致贈儀式**，"
+      },
+      {
+        "type": "paragraph",
+        "content": "全場以熱烈掌聲👏 感謝理事長多年來的奉獻與領導，氣氛溫馨又感人💐。"
+      },
+      {
+        "type": "paragraph",
+        "content": "🤝 我們也榮幸邀請多家知名品牌嘉賓蒞臨現場："
+      },
+      {
+        "type": "paragraph",
+        "content": "**食尚玩家、火山雞排、吉品食品、荃富貿易、良晟食品** 等，"
+      },
+      {
+        "type": "paragraph",
+        "content": "一同見證協會的成長與產業交流的美好時刻！🌱"
+      },
+      {
+        "type": "paragraph",
+        "content": "🍹 活動中由 **LIM TEH時尚飲品** 提供特製飲品，"
+      },
+      {
+        "type": "paragraph",
+        "content": "秘書長更親自介紹新品，讓會員搶先體驗嚐鮮～讚聲連連！👍💬"
+      },
+      {
+        "type": "paragraph",
+        "content": "🥂 最後，大家一同品嚐 **金門高粱中秋限定版**，"
+      },
+      {
+        "type": "paragraph",
+        "content": "「酒醒只在花前坐，酒醉還來花下眠。」"
+      },
+      {
+        "type": "paragraph",
+        "content": "在微醺與歡笑中為這場聚會畫下完美句點🌕🌸"
+      },
       { "type": "paragraph", "content": "整場聚餐氣氛熱烈、情誼滿滿💞" },
       { "type": "paragraph", "content": "會員們在輕鬆愉快的氣氛中交流分享，" },
-      { "type": "paragraph", "content": "展現了協會團結、互助、共榮的精神！💪🌿" }
+      {
+        "type": "paragraph",
+        "content": "展現了協會團結、互助、共榮的精神！💪🌿"
+      }
     ],
     "image": "/activity/20251015/20251015_activity_1.jpg",
     "images": [
@@ -139,6 +235,148 @@
       "/activity/20251015/20251015_activity_3.jpg",
       "/activity/20251015/20251015_activity_4.jpg",
       "/activity/20251015/20251015_activity_5.jpg"
+    ],
+    "status": "已結束",
+    "featured": true
+  },
+  {
+    "id": "5",
+    "title": "2025第十一屆第五次例會-終餐敘暨媒合交流會",
+    "type": "例會",
+    "date": "2025年12月10日",
+    "time": "18:00-21:00",
+    "location": "海大王時尚喜宴廣場",
+    "address": "新北產業園區五工路66號2樓",
+    "description": "【精彩回顧】共創餐飲新局！2025 年度聚餐圓滿落幕",
+    "contentBlocks": [
+      { "type": "heading", "level": 3, "content": "活動內容：" },
+      {
+        "type": "paragraph",
+        "content": "溫馨的燈光、熱絡的交流，台灣速食餐飲協會年度聚餐於昨日完美收官！感謝每一位撥冗出席的會員夥伴，讓現場充滿了正能量與傳承的氣息。✨"
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "content": "📸 精彩現場直擊"
+      },
+      {
+        "type": "paragraph",
+        "content": "活動由秘書長活力開場，理事長在致詞中感性表示：「感謝各位在變動的環境中始終守望相助。」現場也熱烈歡迎了新會員的加入，為協會注入新鮮血液。"
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "content": "🚀 2026 全力衝刺：五大主軸佈達"
+      },
+      {
+        "type": "paragraph",
+        "content": "明年的會務規劃是本次聚餐的重頭戲！執行顧問詳細解說了未來的 <strong>五大主軸</strong>。明年我們將維持規律的節奏： 📅 關鍵日期報你知：明年 2/26、5/21、8/20 將舉辦定期餐會，10/29 更有期待已久的訪廠旅遊！請大家務必空下這幾個星期四。"
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "content": "💡 專業賦能：從 AI 到 ESG"
+      },
+      {
+        "type": "paragraph",
+        "content": "大家最關心的專業課程也已排定，包含："
+      },
+      {
+        "type": "list",
+        "items": [
+          "AI 智能管理：優化營運效率。",
+          "品牌定位與營銷：打響品牌名聲。",
+          "政策對接服務：協會將作為窗口，協助會員應對 碳排、ESG、勞資協調 等法規挑戰。",
+          "稅務策略：由會計師親自授課，幫助大家合理節稅，守住經營成果。"
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "content": "🎖️ 感恩有您：顧問證書頒發"
+      },
+      {
+        "type": "paragraph",
+        "content": "大會最後由理事長親自頒發顧問證書，感謝顧問群無私的指導，成為會員們最強大的後盾。"
+      },
+      {
+        "type": "paragraph",
+        "content": "理事長結語： 一個人走得快，一群人走得遠。感謝參與的每一位夥伴，2026 年，讓我們繼續攜手，讓速食餐飲產業變得更強大！我們下次活動見！"
+      },
+      {
+        "type": "paragraph",
+        "content": "#台灣速食餐飲協會 #年度聚餐 #餐飲趨勢 #AI管理 #ESG #共創共好"
+      }
+    ],
+    "image": "/activity/20251210/activity_1.jpg",
+    "images": [
+      "/activity/20251210/activity_1.jpg",
+      "/activity/20251210/activity_2.jpg",
+      "/activity/20251210/activity_3.jpg",
+      "/activity/20251210/activity_4.jpg",
+      "/activity/20251210/activity_5.jpg",
+      "/activity/20251210/activity_6.jpg",
+      "/activity/20251210/activity_7.jpg",
+      "/activity/20251210/activity_8.jpg",
+      "/activity/20251210/activity_9.jpg",
+      "/activity/20251210/activity_10.jpg",
+      "/activity/20251210/activity_11.jpg",
+      "/activity/20251210/activity_12.jpg"
+    ],
+    "status": "已結束",
+    "featured": true
+  },
+  {
+    "id": "6",
+    "title": "2025 商務媒合x品牌定位x節稅2.0x政府補助課程講座",
+    "type": "例會",
+    "date": "2025年12月26日",
+    "time": "13:00-17:00",
+    "location": "西勝時星",
+    "address": "新北市新莊區富貴路558號2樓",
+    "description": "【現場直擊】商務媒合火力全開！",
+    "contentBlocks": [
+      {
+        "type": "paragraph",
+        "content": "這不是講座，這是一場企業進化的集體實驗！ 昨天的 <strong>「商務媒合 × 品牌定位 × 節稅 × 政府補助」</strong> 活動圓滿成功！現場擠滿了渴望升級的老闆們，氣氛熱烈到冷氣都快不夠用！🔥"
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "content": "📸 精彩亮點回顧："
+      },
+      {
+        "type": "list",
+        "items": [
+          "【省稅神招】：張凱翔會計師一開口，台下全都在瘋狂抄筆記。原來合法省下的稅金，就是最好的營運週轉金！",
+          "【補助金大解密】：呂建緯顧問分享「不用還的錢」怎麼拿，大家才驚覺：原來政府的資源這麼多，只是以前不知道怎麼拿！",
+          "【用人智慧】：ISA 秘書長分享少點鹽的成功經驗，讓在座飽受缺工之苦的老闆們豁然開朗——原來重點不是找人，是「留人與制度」。",
+          "【品牌制勝】：秘醬滷味周董的品牌黃金法則，直接擊中痛點，教大家如何把「產品」變成「有產值的品牌」。"
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "content": "🤝 資源媒合現場"
+      },
+      {
+        "type": "paragraph",
+        "content": "除了課程內容，最精彩的莫過於最後的商務媒合時間！ 藉由活動會員夥伴們可以直接交換名片、對接資源。在協會，我們不只是互相學習，更是彼此的貴人。"
+      },
+      {
+        "type": "paragraph",
+        "content": "#台灣速食餐飲協會 #企業加速器 #政府補助 #節稅實務 #品牌升級 #商務媒合 #餐飲創業"
+      }
+    ],
+    "image": "/activity/20251226/activity_1.jpg",
+    "images": [
+      "/activity/20251226/activity_1.jpg",
+      "/activity/20251226/activity_2.jpg",
+      "/activity/20251226/activity_3.jpg",
+      "/activity/20251226/activity_4.jpg",
+      "/activity/20251226/activity_5.jpg",
+      "/activity/20251226/activity_6.jpg",
+      "/activity/20251226/activity_7.jpg"
     ],
     "status": "已結束",
     "featured": true
