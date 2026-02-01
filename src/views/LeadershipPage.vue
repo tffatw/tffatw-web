@@ -21,92 +21,39 @@
           </p>
         </div>
 
-        <!-- 理事長 -->
-        <div class="mb-16">
+        <div
+          v-for="(member, index) in currentBoardMembers"
+          :key="index"
+          class="mb-16"
+        >
           <div
             class="flex flex-col md:flex-row items-center gap-8 max-w-4xl mx-auto"
           >
             <div
-              class="w-64 h-64 overflow-hidden rounded-full border-4 border-red-100 shadow-lg flex-shrink-0"
+              :class="[
+                'overflow-hidden rounded-full border-4 border-red-100 shadow-lg flex-shrink-0',
+                member.title === '理事長' ? 'w-64 h-64' : 'w-48 h-48',
+              ]"
             >
               <img
-                src="../assets/chief.jpg"
-                alt="理事長"
-                class="w-full h-full object-cover"
-              />
-            </div>
-            <div>
-              <h3 class="text-2xl font-bold text-gray-800 mb-2">蔡思庭</h3>
-              <p class="text-red-600 font-medium mb-4">理事長</p>
-              <p class="text-gray-600 mb-4 leading-relaxed">
-                酷斯拉咖啡執行長、紅橘子早午餐連鎖創辦人、愛餡貓烘焙總經理、天天蛋餅飯糰顧問、天天韓式炙燒鍋顧問。
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- 秘書長 -->
-        <div class="mb-16">
-          <div
-            class="flex flex-col md:flex-row items-center gap-8 max-w-4xl mx-auto"
-          >
-            <div
-              class="w-48 h-48 overflow-hidden rounded-full border-4 border-red-100 shadow-lg flex-shrink-0"
-            >
-              <img
-                src="../assets/chiefOfStaff.jpg"
-                alt="秘書長"
+                :src="member.image"
+                :alt="member.name"
                 class="w-full h-full object-cover object-top"
               />
             </div>
             <div>
-              <h3 class="text-xl font-bold text-gray-800 mb-2">蕭雅梅</h3>
-              <p class="text-red-600 font-medium mb-4">秘書長</p>
-              <p class="text-gray-600 leading-relaxed">
-                少點鹽健康餐盒創辦人，10間直營門市，聚焦健康飲食、永續經營，推動多品牌共創與人才孵化。
-              </p>
+              <h3 class="text-2xl font-bold text-gray-800 mb-2">
+                {{ member.name }}
+              </h3>
+              <p class="text-red-600 font-medium mb-4">{{ member.title }}</p>
+              <ul class="list-disc list-inside text-gray-600 leading-relaxed">
+                <li v-for="(item, i) in member.experience" :key="i">
+                  {{ item }}
+                </li>
+              </ul>
             </div>
           </div>
         </div>
-
-        <!-- 教育顧問、副秘書長 -->
-        <div class="mb-16">
-          <div
-            class="flex flex-col md:flex-row items-center gap-8 max-w-4xl mx-auto"
-          >
-            <div
-              class="w-48 h-48 overflow-hidden rounded-full border-4 border-red-100 shadow-lg flex-shrink-0"
-            >
-              <img
-                src="../assets/deputyChiefOfStaff.png"
-                alt="教育顧問"
-                class="w-full h-full object-cover object-top"
-              />
-            </div>
-            <div>
-              <h3 class="text-xl font-bold text-gray-800 mb-2">Leo</h3>
-              <p class="text-red-600 font-medium mb-4">教育顧問</p>
-              <p class="text-gray-600 leading-relaxed">
-                團隊打造、企業行銷、流量變現、創業諮詢、廣告投放
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- 秘書長 -->
-        <!-- <div class="mb-16">
-          <div class="flex flex-col md:flex-row items-center gap-8 max-w-4xl mx-auto">
-            <div class="w-48 h-48 overflow-hidden rounded-full border-4 border-red-100 shadow-lg flex-shrink-0">
-              <img src="../assets/male_icon.png" alt="副秘書長" class="w-full h-full object-cover object-top">
-            </div>
-            <div>
-              <h3 class="text-xl font-bold text-gray-800 mb-2">徐秀全</h3>
-              <p class="text-red-600 font-medium mb-4">副秘書長</p>
-              <p class="text-gray-600 leading-relaxed">
-              </p>
-            </div>
-          </div>
-        </div> -->
       </div>
     </section>
 
@@ -238,8 +185,53 @@ import howmamaImg from "../assets/howmama.jpg";
 import freshKingImg from "../assets/freshking.jpg";
 import gigaFoodsImg from "../assets/giga_foods.png";
 import lechefImg from "../assets/lechef.png";
+import chiefGif from "../assets/chief.gif";
+import chiefOfStaffImg from "../assets/chiefOfStaff.jpg";
+import deputyChiefOfStaffImg from "../assets/deputyChiefOfStaff.png";
 
-// 理事會成員數據
+// 當屆理事會成員數據
+const currentBoardMembers = [
+  {
+    name: "蔡思庭",
+    title: "理事長",
+    image: chiefGif,
+    experience: [
+      "酷斯拉咖啡執行長",
+      "紅橘子早午餐連鎖創辦人",
+      "愛餡貓烘焙總經理",
+      "天天蛋餅飯糰顧問",
+      "天天韓式炙燒鍋顧問",
+    ],
+  },
+  {
+    name: "蕭雅梅",
+    title: "秘書長",
+    image: chiefOfStaffImg,
+    experience: [
+      "少點鹽健康餐盒創辦人，擁有10間直營門市",
+      "聚焦健康飲食、永續經營",
+      "推動多品牌共創與人才孵化",
+    ],
+  },
+  {
+    name: "Leo",
+    title: "教育顧問",
+    image: deputyChiefOfStaffImg,
+    experience: [
+      "社團法人中華亞太創新銷售協會-理事長",
+      "北京企業管理學院-副院長",
+      "亮點企業管理諮詢有限公司-總經理",
+      "盟勝國際、聯網股份有限公司-董事",
+      "知樂學院-院長",
+      "YouTube 頻道「LEO老師開講」-主講人",
+      "YouTube 頻道「創業啟示錄」-主持人",
+      "創作書籍：《魔術般打造高效團隊》、《價值百萬的感恩課》、《家長有智慧，孩子才聰慧》",
+    ],
+  },
+  // 可以根據需要添加更多成員
+];
+
+// 理事會成員數據 (此部分將在之後移除，或與currentBoardMembers合併)
 const boardMembers = [
   { name: "陳志強", company: "AA公司", image: maleIconImg },
   { name: "張麗華", company: "BB集團", image: maleIconImg },
