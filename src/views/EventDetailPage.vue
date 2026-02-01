@@ -118,7 +118,11 @@
                 <p class="text-gray-600 mb-4">
                   立即報名參加本次活動，名額有限，請儘早報名！
                 </p>
-                <button class="btn btn-primary w-full py-3">立即報名</button>
+                <a
+                  :href="getMailtoLink(event.title)"
+                  class="btn btn-primary w-full py-3"
+                  >立即報名</a
+                >
               </div>
               <div
                 v-else-if="event.status === '籌備中'"
@@ -134,9 +138,6 @@
               >
                 <h3 class="text-xl font-bold mb-4">活動已結束</h3>
                 <p class="text-gray-600 mb-4">感謝您的關注，活動已結束。</p>
-                <button class="btn btn-secondary w-full py-3">
-                  查看活動回顧
-                </button>
               </div>
             </div>
           </div>
@@ -400,6 +401,13 @@ const loading = ref(true);
 const event = ref(null);
 const relatedEvents = ref([]);
 const currentImage = ref(null);
+
+const associationEmail = "tffatw.org@gmail.com"; // 協會Email
+
+const getMailtoLink = (eventTitle) => {
+  const subject = encodeURIComponent(`活動報名：${eventTitle}`);
+  return `mailto:${associationEmail}?subject=${subject}`;
+};
 
 // 狀態徽章樣式
 const getStatusBadgeClass = (status) => {

@@ -380,5 +380,20 @@
     ],
     "status": "已結束",
     "featured": true
+  },
+  {
+    "id": "7",
+    "title": "2026 第十一屆第二次會員代表大會暨商務媒合",
+    "type": "例會",
+    "date": "2026年02月26日",
+    "time": "18:00",
+    "location": "北投新上享",
+    "address": "新北市北投區光明路226號",
+    "description": "",
+    "contentBlocks": [],
+    "image": "/activity/20260226/front_cover.png",
+    "images": [],
+    "status": "報名中",
+    "featured": true
   }
 ]
