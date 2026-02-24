@@ -215,7 +215,7 @@ const currentBoardMembers = [
   },
   {
     name: "Leo",
-    title: "教育顧問",
+    title: "首席顧問",
     image: deputyChiefOfStaffImg,
     experience: [
       "社團法人中華亞太創新銷售協會-理事長",
