@@ -390,10 +390,53 @@
     "location": "北投新上享",
     "address": "新北市北投區光明路226號",
     "description": "",
-    "contentBlocks": [],
-    "image": "/activity/20260226/front_cover.png",
-    "images": [],
-    "status": "報名中",
+    "contentBlocks": [
+      {
+        "type": "paragraph",
+        "content": "台灣速食餐飲協會的「春季聯歡晚宴」在大家的歡笑聲中圓滿落幕。感謝每一位到場支持的「大哥大姐」與夥伴們，讓這場春酒聚會不僅有美食的溫度，更有產業的高度。"
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "content": "📸 精彩現場直擊："
+      },
+      {
+        "type": "list",
+        "items": [
+          "【感恩有您：強大後盾】活動圓滿成功的背後，離不開給力的夥伴。特別鳴謝 「智庫機構」 與 「火炎堂」 的鼎力支持與贊助金支持！因為有您們的慷慨襄助，讓協會能持續深耕、為會員創造更多價值。",
+          "【新血注入：生機勃勃】現場氣氛最高潮的時刻，莫過於歡迎新夥伴的加入！讓我們再次熱烈掌聲歡迎 「信海水產」 與 「富甲行銷」 正式成為協會的一員。從優質食材供應到專業行銷策略，新會員的加入無疑為我們協會的資源版圖拼上了重要的兩塊拼圖！",
+          "【商機對接：強強聯手】新品發表與商務媒合環節熱鬧非凡。在杯觥交錯間，許多合作機會已經悄悄萌芽。這就是協會的魅力——在最輕鬆的氛圍下，談成最紮實的生意。"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": "一年之計在於春，這場餐會為我們 2026 年的各項會務拉開了亮眼的序幕。錯過這次的朋友，別忘了我們還有 5 月、8 月的餐會等著您。讓我們保持這份熱情，明年（甚至是明天的每一天）一起讓速食餐飲產業更強大！"
+      },
+      {
+        "type": "paragraph",
+        "content": "#台灣速食餐飲協會 #年度餐會 #春賦同歡 #北投美食 #商務媒合 #餐飲人的日常 #共譜新篇"
+      }
+    ],
+    "image": "/activity/20260226/activity_1.jpg",
+    "images": [
+      "/activity/20260226/activity_1.jpg",
+      "/activity/20260226/activity_2.jpg",
+      "/activity/20260226/activity_3.jpg",
+      "/activity/20260226/activity_4.jpg",
+      "/activity/20260226/activity_5.jpg",
+      "/activity/20260226/activity_6.jpg",
+      "/activity/20260226/activity_7.jpg",
+      "/activity/20260226/activity_8.jpg",
+      "/activity/20260226/activity_9.jpg",
+      "/activity/20260226/activity_10.jpg",
+      "/activity/20260226/activity_11.jpg",
+      "/activity/20260226/activity_12.jpg",
+      "/activity/20260226/activity_13.jpg",
+      "/activity/20260226/activity_14.jpg",
+      "/activity/20260226/activity_15.jpg",
+      "/activity/20260226/activity_16.jpg"
+    ],
+    "status": "已結束",
     "featured": true
   }
 ]
