@@ -48,6 +48,12 @@ const routes = [
     component: () => import('../views/RedOrangePage.vue'),
     meta: { standalone: true }
   },
+  {
+    path: '/redOrange-backend',
+    name: 'RedOrangeBackend',
+    component: () => import('../views/RedOrangeBackendPage.vue'),
+    meta: { standalone: true }
+  },
   // 404页面
   {
     path: '/:pathMatch(.*)*',
