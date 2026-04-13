@@ -1,9 +1,18 @@
 import { createApp } from 'vue'
+import { createPinia } from 'pinia'
 import './style.css'
 import App from './App.vue'
 import router from './router'
+import { useAuthStore } from './stores/auth'
 
-// 創建Vue應用實例並掛載
-createApp(App)
-  .use(router)
-  .mount('#app')
+const app = createApp(App)
+const pinia = createPinia()
+
+app.use(pinia)
+app.use(router)
+
+// 還原登入狀態（在應用掛載前）
+const authStore = useAuthStore()
+authStore.restoreSession()
+
+app.mount('#app')

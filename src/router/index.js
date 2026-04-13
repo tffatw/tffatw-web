@@ -1,4 +1,5 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
+import { useAuthStore } from '../stores/auth'
 import HomePage from '../views/HomePage.vue'
 import AboutPage from '../views/AboutPage.vue'
 import LeadershipPage from '../views/LeadershipPage.vue'
@@ -42,6 +43,17 @@ const routes = [
     name: 'Contact',
     component: ContactPage
   },
+  {
+    path: '/login',
+    name: 'Login',
+    component: () => import('../views/LoginPage.vue')
+  },
+  {
+    path: '/member',
+    name: 'MemberPortal',
+    component: () => import('../views/MemberPortalPage.vue'),
+    meta: { requiresAuth: true }
+  },
   // 404页面
   {
     path: '/:pathMatch(.*)*',
@@ -62,4 +74,16 @@ const router = createRouter({
   }
 })
 
-export default router 
+router.beforeEach((to) => {
+  const authStore = useAuthStore()
+
+  if (to.meta.requiresAuth && !authStore.isLoggedIn) {
+    return { name: 'Login', query: { redirect: to.fullPath } }
+  }
+
+  if (to.name === 'Login' && authStore.isLoggedIn) {
+    return { name: 'MemberPortal' }
+  }
+})
+
+export default router
