@@ -54,6 +54,30 @@ const routes = [
     component: () => import('../views/RedOrangeBackendPage.vue'),
     meta: { standalone: true }
   },
+  {
+    path: '/association-login',
+    name: 'AssociationLogin',
+    component: () => import('../views/AssociationLoginPage.vue'),
+    meta: { standalone: true }
+  },
+  {
+    path: '/news',
+    name: 'NewsList',
+    component: () => import('../views/NewsListPage.vue'),
+    meta: { standalone: true }
+  },
+  {
+    path: '/news/editor',
+    name: 'NewsEditor',
+    component: () => import('../views/NewsEditorPage.vue'),
+    meta: { standalone: true }
+  },
+  {
+    path: '/news/editor/:id',
+    name: 'NewsEditorEdit',
+    component: () => import('../views/NewsEditorPage.vue'),
+    meta: { standalone: true }
+  },
   // 404页面
   {
     path: '/:pathMatch(.*)*',
