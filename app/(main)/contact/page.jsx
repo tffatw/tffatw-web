@@ -21,15 +21,33 @@ export default function ContactPage() {
     setForm(f => ({ ...f, [name]: type === 'checkbox' ? checked : value }))
   }
 
-  const submitForm = (e) => {
+  const submitForm = async (e) => {
     e.preventDefault()
     setSubmitting(true)
-    setTimeout(() => {
+    try {
+      const res = await fetch('https://formspree.io/f/mvzloloy', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          姓名: form.name,
+          信箱: form.email,
+          電話: form.phone,
+          主題: form.subject,
+          留言: form.message,
+        }),
+      })
+      if (res.ok) {
+        setSubmitSuccess(true)
+        setForm({ name: '', email: '', phone: '', subject: '', message: '', privacy: false })
+        setTimeout(() => setSubmitSuccess(false), 3000)
+      } else {
+        alert('提交失敗，請稍後再試或直接來信 tffatw.org@gmail.com')
+      }
+    } catch {
+      alert('網路錯誤，請稍後再試或直接來信 tffatw.org@gmail.com')
+    } finally {
       setSubmitting(false)
-      setSubmitSuccess(true)
-      setForm({ name: '', email: '', phone: '', subject: '', message: '', privacy: false })
-      setTimeout(() => setSubmitSuccess(false), 3000)
-    }, 1500)
+    }
   }
 
   return (
