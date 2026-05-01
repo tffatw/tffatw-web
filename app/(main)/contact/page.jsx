@@ -149,14 +149,19 @@ export default function ContactPage() {
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-gray-800">我們的位置</h2>
           </div>
-          <div className="h-96 bg-gray-300 rounded-lg overflow-hidden">
-            <div className="h-full flex items-center justify-center bg-gray-100">
-              <p className="text-gray-500">此處將顯示地圖，實際使用時請替換為您的地圖組件或嵌入地圖</p>
-            </div>
+          <div className="h-96 rounded-lg overflow-hidden shadow-md">
+            <iframe
+              src="https://maps.google.com/maps?q=台北市內湖區新湖二路156號&t=&z=17&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
           <div className="mt-4 text-center text-gray-600">
-            <p>地址：台北市xx區xxx路三段303號</p>
-            <p className="mt-1">郵編：10451</p>
+            <p>地址：台北市內湖區新湖二路156號</p>
           </div>
         </div>
       </section>
