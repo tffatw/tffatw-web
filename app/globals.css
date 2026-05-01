@@ -38,3 +38,16 @@ body {
     @apply bg-white rounded-lg shadow-md overflow-hidden;
   }
 }
+
+/* Scroll-reveal animation for RedOrangePage */
+.reveal {
+  opacity: 0;
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+.reveal.reveal-up    { transform: translateY(32px); }
+.reveal.reveal-left  { transform: translateX(-32px); }
+.reveal.reveal-right { transform: translateX(32px); }
+.reveal.revealed {
+  opacity: 1;
+  transform: none;
+}
