@@ -4,8 +4,8 @@
 
 /* 基本樣式 */
 body {
-  background-color: #f9fafb;
-  color: #111827;
+  background-color: #F9F9F9;
+  color: #2C3E50;
   min-height: 100vh;
 }
 
@@ -29,7 +29,11 @@ body {
     @apply px-4 py-2 rounded-md font-medium transition-colors;
   }
   .btn-primary {
-    @apply bg-blue-600 text-white hover:bg-blue-700;
+    @apply text-white;
+    background-color: #FFB84D;
+  }
+  .btn-primary:hover {
+    background-color: #FFA07A;
   }
   .btn-secondary {
     @apply bg-gray-200 text-gray-800 hover:bg-gray-300;
