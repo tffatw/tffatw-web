@@ -70,20 +70,20 @@ export default function EventsPage() {
 
   return (
     <div>
-      <section className="bg-[#e0725f] text-white py-20">
+      <section className="bg-gradient-to-br from-[#FFB84D] to-[#FFA07A] text-white pt-32 pb-20">
         <div className="container-custom text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">活動資訊</h1>
-          <p className="text-xl md:text-2xl max-w-3xl mx-auto">掌握協會最新動態與行業資訊</p>
+          <p className="text-xl md:text-2xl max-w-3xl mx-auto opacity-90">掌握協會最新動態與行業資訊</p>
         </div>
       </section>
 
-      <section className="bg-gray-50 py-12">
+      <section className="bg-gradient-to-br from-[#F9F9F9] to-[#FFF5E6] py-12">
         <div className="container-custom">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex flex-wrap gap-3">
               <button
                 onClick={() => handleCategoryChange('all')}
-                className={`px-4 py-2 rounded-full text-sm font-medium ${currentCategory === 'all' ? 'bg-red-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${currentCategory === 'all' ? 'bg-gradient-to-r from-[#FFB84D] to-[#FFA07A] text-white shadow-md' : 'bg-white text-[#6B7280] border border-[#FFB84D]/20 hover:bg-[#FFF5E6] hover:text-[#FFB84D]'}`}
               >
                 全部
               </button>
@@ -91,7 +91,7 @@ export default function EventsPage() {
                 <button
                   key={cat.value}
                   onClick={() => handleCategoryChange(cat.value)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium ${currentCategory === cat.value ? 'bg-red-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${currentCategory === cat.value ? 'bg-gradient-to-r from-[#FFB84D] to-[#FFA07A] text-white shadow-md' : 'bg-white text-[#6B7280] border border-[#FFB84D]/20 hover:bg-[#FFF5E6] hover:text-[#FFB84D]'}`}
                 >
                   {cat.label}
                 </button>
@@ -103,10 +103,10 @@ export default function EventsPage() {
                 value={searchQuery}
                 onChange={handleSearchChange}
                 placeholder="搜尋活動..."
-                className="border border-gray-300 rounded-full py-2 px-4 w-full md:w-64 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                className="border border-[#FFB84D]/30 rounded-full py-2 px-4 w-full md:w-64 focus:outline-none focus:ring-2 focus:ring-[#FFB84D] focus:border-[#FFB84D] bg-white"
               />
               <button className="absolute right-3 top-1/2 -translate-y-1/2">
-                <svg className="w-5 h-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-5 h-5 text-[#FFB84D]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
               </button>
@@ -115,32 +115,32 @@ export default function EventsPage() {
         </div>
       </section>
 
-      <section className="bg-gray-50 py-16">
+      <section className="bg-gradient-to-br from-[#F9F9F9] to-[#FFF5E6] py-16">
         <div className="container-custom">
           {filteredEvents.length === 0 ? (
             <div className="text-center py-12">
-              <svg className="w-16 h-16 text-gray-400 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="w-16 h-16 text-[#FFB84D]/40 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <h3 className="text-xl font-semibold text-gray-700 mb-2">沒有找到符合條件的活動</h3>
-              <p className="text-gray-500">請嘗試其他搜尋條件或瀏覽全部活動</p>
-              <button onClick={resetFilters} className="mt-4 text-red-600 hover:text-red-800 font-medium">
+              <h3 className="text-xl font-semibold text-[#2C3E50] mb-2">沒有找到符合條件的活動</h3>
+              <p className="text-[#6B7280]">請嘗試其他搜尋條件或瀏覽全部活動</p>
+              <button onClick={resetFilters} className="mt-4 text-[#FFB84D] hover:text-[#FFA07A] font-medium transition-colors">
                 重置篩選條件
               </button>
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredEvents.map(event => (
-                <div key={event.id} className="card overflow-hidden group">
+                <div key={event.id} className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group border border-[#FFB84D]/10">
                   <Link href={`/events/${event.id}`}>
                     <div className="relative overflow-hidden">
                       <img src={event.image} alt={event.title} className="w-full h-52 object-cover transition duration-500 group-hover:scale-105" />
                       <div className="absolute top-4 left-4">
-                        <span className="inline-block bg-red-600 text-white text-sm font-semibold px-3 py-1 rounded">{event.type}</span>
+                        <span className="inline-block bg-gradient-to-r from-[#FFB84D] to-[#FFA07A] text-white text-sm font-semibold px-3 py-1 rounded-full shadow">{event.type}</span>
                       </div>
-                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                        <div className="flex items-center text-white">
-                          <svg className="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+                        <div className="flex items-center text-white text-sm">
+                          <svg className="w-4 h-4 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                           </svg>
                           <span>{event.date}</span>
@@ -150,21 +150,21 @@ export default function EventsPage() {
                   </Link>
                   <div className="p-6">
                     <Link href={`/events/${event.id}`}>
-                      <h3 className="text-xl font-semibold text-gray-800 mb-3 line-clamp-2 transition-colors hover:text-red-600">
+                      <h3 className="text-xl font-semibold text-[#2C3E50] mb-3 line-clamp-2 transition-colors hover:text-[#FFB84D]">
                         {event.title}
                       </h3>
                     </Link>
-                    <p className="text-gray-600 mb-4 line-clamp-3">{event.description}</p>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center text-sm text-gray-500">
-                        <svg className="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <p className="text-[#6B7280] mb-4 line-clamp-3 text-sm">{event.description}</p>
+                    <div className="flex items-center justify-between pt-3 border-t border-[#FFB84D]/10">
+                      <div className="flex items-center text-sm text-[#6B7280]">
+                        <svg className="w-4 h-4 mr-1 text-[#FFB84D] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                         </svg>
-                        <span>{event.location}</span>
+                        <span className="truncate max-w-[120px]">{event.location}</span>
                       </div>
-                      <Link href={`/events/${event.id}`} className="text-red-600 hover:text-red-800 font-medium text-sm">
-                        查看詳情 &rarr;
+                      <Link href={`/events/${event.id}`} className="text-[#FFB84D] hover:text-[#FFA07A] font-medium text-sm transition-colors">
+                        查看詳情 →
                       </Link>
                     </div>
                   </div>
@@ -177,7 +177,7 @@ export default function EventsPage() {
             <div className="flex space-x-1">
               <button
                 onClick={() => currentPage > 1 && setCurrentPage(p => p - 1)}
-                className={`px-3 py-1 rounded text-sm ${currentPage === 1 ? 'bg-gray-200 text-gray-400 cursor-not-allowed' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
+                className={`px-3 py-1 rounded-lg text-sm transition-colors ${currentPage === 1 ? 'bg-gray-100 text-gray-400 cursor-not-allowed' : 'bg-white text-[#6B7280] border border-[#FFB84D]/20 hover:bg-[#FFF5E6] hover:text-[#FFB84D]'}`}
               >
                 上一頁
               </button>
@@ -185,14 +185,14 @@ export default function EventsPage() {
                 <button
                   key={page}
                   onClick={() => setCurrentPage(page)}
-                  className={`px-3 py-1 rounded text-sm ${currentPage === page ? 'bg-red-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
+                  className={`px-3 py-1 rounded-lg text-sm transition-colors ${currentPage === page ? 'bg-gradient-to-r from-[#FFB84D] to-[#FFA07A] text-white shadow-md' : 'bg-white text-[#6B7280] border border-[#FFB84D]/20 hover:bg-[#FFF5E6] hover:text-[#FFB84D]'}`}
                 >
                   {page}
                 </button>
               ))}
               <button
                 onClick={() => currentPage < totalPages && setCurrentPage(p => p + 1)}
-                className={`px-3 py-1 rounded text-sm ${currentPage === totalPages ? 'bg-gray-200 text-gray-400 cursor-not-allowed' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
+                className={`px-3 py-1 rounded-lg text-sm transition-colors ${currentPage === totalPages ? 'bg-gray-100 text-gray-400 cursor-not-allowed' : 'bg-white text-[#6B7280] border border-[#FFB84D]/20 hover:bg-[#FFF5E6] hover:text-[#FFB84D]'}`}
               >
                 下一頁
               </button>

@@ -54,30 +54,30 @@ export default function LeadershipPage() {
 
   return (
     <div>
-      <section className="bg-[#e0725f] text-white py-20">
+      <section className="bg-gradient-to-br from-[#FFB84D] to-[#FFA07A] text-white pt-32 pb-20">
         <div className="container-custom text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">協會成員</h1>
-          <p className="text-xl md:text-2xl max-w-3xl mx-auto">了解協會領導團隊，共同推動行業發展</p>
+          <p className="text-xl md:text-2xl max-w-3xl mx-auto opacity-90">了解協會領導團隊，共同推動行業發展</p>
         </div>
       </section>
 
       <section className="py-16 bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">本屆理事會</h2>
-            <div className="w-20 h-1 bg-red-600 mx-auto mb-4"></div>
-            <p className="text-gray-600 max-w-2xl mx-auto">第十一屆理事會成員由行業內著名企業領導和專業人士組成</p>
+            <h2 className="text-3xl font-bold text-[#2C3E50] mb-4">本屆理事會</h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-[#FFB84D] to-[#FFA07A] mx-auto mb-4 rounded-full" />
+            <p className="text-[#6B7280] max-w-2xl mx-auto">第十一屆理事會成員由行業內著名企業領導和專業人士組成</p>
           </div>
           {currentBoardMembers.map((member, i) => (
             <div key={i} className="mb-16">
               <div className="flex flex-col md:flex-row items-center gap-8 max-w-4xl mx-auto">
-                <div className={`overflow-hidden rounded-full border-4 border-red-100 shadow-lg flex-shrink-0 ${member.title === '理事長' ? 'w-64 h-64' : 'w-48 h-48'}`}>
+                <div className={`overflow-hidden rounded-full border-4 border-[#FFB84D]/30 shadow-lg flex-shrink-0 ${member.title === '理事長' ? 'w-64 h-64' : 'w-48 h-48'}`}>
                   <img src={member.image} alt={member.name} className="w-full h-full object-cover object-top" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-800 mb-2">{member.name}</h3>
-                  <p className="text-red-600 font-medium mb-4">{member.title}</p>
-                  <ul className="list-disc list-inside text-gray-600 leading-relaxed">
+                  <h3 className="text-2xl font-bold text-[#2C3E50] mb-2">{member.name}</h3>
+                  <p className="text-[#FFB84D] font-medium mb-4">{member.title}</p>
+                  <ul className="list-disc list-inside text-[#6B7280] leading-relaxed">
                     {member.experience.map((exp, j) => <li key={j}>{exp}</li>)}
                   </ul>
                 </div>
@@ -87,23 +87,23 @@ export default function LeadershipPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gradient-to-br from-[#F9F9F9] to-[#FFF5E6]">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">歷屆理事長</h2>
-            <div className="w-20 h-1 bg-red-600 mx-auto mb-4"></div>
-            <p className="text-gray-600 max-w-2xl mx-auto">感謝歷屆理事長為協會發展做出的重要貢獻</p>
+            <h2 className="text-3xl font-bold text-[#2C3E50] mb-4">歷屆理事長</h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-[#FFB84D] to-[#FFA07A] mx-auto mb-4 rounded-full" />
+            <p className="text-[#6B7280] max-w-2xl mx-auto">感謝歷屆理事長為協會發展做出的重要貢獻</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {pastChairmen.map((c, i) => (
-              <div key={i} className="card p-6 text-center">
-                <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-red-100 mx-auto mb-4">
+              <div key={i} className="bg-white rounded-2xl shadow-lg p-6 text-center border border-[#FFB84D]/20 hover:shadow-xl transition-shadow">
+                <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-[#FFB84D]/30 mx-auto mb-4">
                   <img src={c.image} alt={c.name} className="w-full h-full object-cover" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-800">{c.name}</h3>
-                <p className="text-red-600 font-medium mb-2">{c.term}</p>
-                <p className="text-gray-600 text-sm mb-2">{c.period}</p>
-                <p className="text-gray-600 text-sm">{c.company}</p>
+                <h3 className="text-lg font-bold text-[#2C3E50]">{c.name}</h3>
+                <p className="text-[#FFB84D] font-medium mb-2">{c.term}</p>
+                <p className="text-[#6B7280] text-sm mb-2">{c.period}</p>
+                <p className="text-[#6B7280] text-sm">{c.company}</p>
               </div>
             ))}
           </div>
@@ -113,27 +113,38 @@ export default function LeadershipPage() {
       <section className="py-16 bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">品牌成員</h2>
-            <div className="w-20 h-1 bg-red-600 mx-auto mb-4"></div>
-            <p className="text-gray-600 max-w-2xl mx-auto">匯聚了國內頂尖速食餐飲品牌的菁英領導者，每位成員皆為業界翹楚，憑藉豐富的市場經驗與專業知識，共同致力於推動產業進步與創新。</p>
+            <h2 className="text-3xl font-bold text-[#2C3E50] mb-4">品牌成員</h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-[#FFB84D] to-[#FFA07A] mx-auto mb-4 rounded-full" />
+            <p className="text-[#6B7280] max-w-2xl mx-auto">匯聚了國內頂尖速食餐飲品牌的菁英領導者，每位成員皆為業界翹楚，憑藉豐富的市場經驗與專業知識，共同致力於推動產業進步與創新。</p>
           </div>
           <div className="mb-8 flex flex-wrap justify-center gap-4">
-            <button onClick={() => setCurrentCategory('all')} className={`px-4 py-2 rounded-full text-sm font-medium ${currentCategory === 'all' ? 'bg-red-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}>全部</button>
+            <button
+              onClick={() => setCurrentCategory('all')}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${currentCategory === 'all' ? 'bg-gradient-to-r from-[#FFB84D] to-[#FFA07A] text-white shadow-md' : 'bg-gray-100 text-[#6B7280] hover:bg-[#FFF5E6] hover:text-[#FFB84D]'}`}
+            >
+              全部
+            </button>
             {brandCategories.map(cat => (
-              <button key={cat.value} onClick={() => setCurrentCategory(cat.value)} className={`px-4 py-2 rounded-full text-sm font-medium ${currentCategory === cat.value ? 'bg-red-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}>{cat.label}</button>
+              <button
+                key={cat.value}
+                onClick={() => setCurrentCategory(cat.value)}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${currentCategory === cat.value ? 'bg-gradient-to-r from-[#FFB84D] to-[#FFA07A] text-white shadow-md' : 'bg-gray-100 text-[#6B7280] hover:bg-[#FFF5E6] hover:text-[#FFB84D]'}`}
+              >
+                {cat.label}
+              </button>
             ))}
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {filteredBrands.map(brand => (
-              <div key={brand.id} className="card p-6 hover:shadow-lg transition-shadow duration-300">
+              <div key={brand.id} className="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-[#FFB84D]/10">
                 <div className="flex justify-center mb-6">
                   <img src={brand.logo} alt={brand.name} className="h-20 object-contain" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-800 text-center mb-2">{brand.name}</h3>
-                <p className="text-sm text-gray-600 text-center mb-4">{brand.category}</p>
-                <p className="text-gray-600 text-sm mb-4">{brand.description}</p>
+                <h3 className="text-lg font-semibold text-[#2C3E50] text-center mb-2">{brand.name}</h3>
+                <p className="text-sm text-[#FFB84D] text-center mb-4">{brand.category}</p>
+                <p className="text-[#6B7280] text-sm mb-4">{brand.description}</p>
                 <div className="text-center">
-                  <a href={brand.website} target="_blank" rel="noopener noreferrer" className="text-red-600 hover:text-red-800 text-sm font-medium">訪問官網 →</a>
+                  <a href={brand.website} target="_blank" rel="noopener noreferrer" className="text-[#FFB84D] hover:text-[#FFA07A] text-sm font-medium transition-colors">訪問官網 →</a>
                 </div>
               </div>
             ))}

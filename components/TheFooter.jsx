@@ -1,11 +1,11 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 const quickLinks = [
-  { href: '/about', label: '關於協會' },
-  { href: '/leadership', label: '協會成員' },
-  { href: '/events', label: '活動資訊' },
-  { href: '/contact', label: '聯絡我們' },
-]
+  { href: "/about", label: "關於協會" },
+  { href: "/leadership", label: "協會成員" },
+  { href: "/events", label: "活動資訊" },
+  { href: "/contact", label: "聯絡我們" },
+];
 
 export default function TheFooter() {
   return (
@@ -14,12 +14,16 @@ export default function TheFooter() {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-[#FFB84D] to-[#FFA07A] rounded-lg flex items-center justify-center shadow-lg flex-shrink-0">
-                <span className="text-white font-bold">台</span>
-              </div>
+              <img
+                src="/images/logo.png"
+                alt="台灣速食餐飲協會"
+                className="h-10 w-auto"
+              />
               <div>
                 <h3 className="text-lg font-semibold">台灣速食餐飲協會</h3>
-                <p className="text-xs text-gray-400">Taiwan Fast Food Association</p>
+                <p className="text-xs text-gray-400">
+                  Taiwan Fast Food Association
+                </p>
               </div>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
@@ -32,7 +36,10 @@ export default function TheFooter() {
             <ul className="space-y-2 text-sm">
               {quickLinks.map(({ href, label }) => (
                 <li key={href}>
-                  <Link href={href} className="text-gray-400 hover:text-[#FFB84D] transition-colors">
+                  <Link
+                    href={href}
+                    className="text-gray-400 hover:text-[#FFB84D] transition-colors"
+                  >
                     {label}
                   </Link>
                 </li>
@@ -45,12 +52,18 @@ export default function TheFooter() {
             <ul className="space-y-2 text-sm text-gray-400">
               <li>台北市內湖區新湖二路 156 號</li>
               <li>
-                <a href="tel:0916044823" className="hover:text-[#FFB84D] transition-colors">
+                <a
+                  href="tel:0916044823"
+                  className="hover:text-[#FFB84D] transition-colors"
+                >
                   0916-044-823
                 </a>
               </li>
               <li>
-                <a href="mailto:tffatw.org@gmail.com" className="hover:text-[#FFB84D] transition-colors">
+                <a
+                  href="mailto:tffatw.org@gmail.com"
+                  className="hover:text-[#FFB84D] transition-colors"
+                >
                   tffatw.org@gmail.com
                 </a>
               </li>
@@ -59,9 +72,12 @@ export default function TheFooter() {
         </div>
 
         <div className="pt-8 border-t border-gray-700 text-center text-sm text-gray-400">
-          <p>&copy; {new Date().getFullYear()} 台灣速食餐飲協會 Taiwan Fast Food Association. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} 台灣速食餐飲協會 Taiwan Fast Food
+            Association. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
-  )
+  );
 }
