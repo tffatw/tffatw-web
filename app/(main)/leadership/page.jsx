@@ -33,6 +33,7 @@ const brandCategories = [
   { label: '餐飲服務', value: '餐飲服務' },
   { label: '供應商', value: '供應商' },
   { label: '食品製造商', value: '食品製造商' },
+  { label: '顧問服務', value: '顧問服務' },
 ]
 
 const brands = [
@@ -46,6 +47,7 @@ const brands = [
   { id: 8, name: '鮮大王', logo: '/images/freshking.jpg', category: '食品製造商', description: '家有鮮大王，清水變雞湯"是我公司希望提供好的產品，讓您的美食更俱色、香、味，同時也讓您的好廚藝更加突出。', website: 'http://www.freshking.com.tw/default.asp' },
   { id: 9, name: '展安食品', logo: '/images/giga_foods.png', category: '食品製造商', description: '成立於 2013 年，遵循創始初心，於食品業界奠定高品質定位。展安堅持以頂級設備及廚藝搭配新鮮、健康、營養的當季食材烹飪出能夠感動您的料理。', website: 'https://www.gigafoods.com.tw/' },
   { id: 10, name: '樂廚', logo: '/images/lechef.png', category: '食品製造商', description: '創造健康樂活Time, 享受簡單輕鬆 Diy 料理', website: 'https://www.lechef.tw/' },
+  { id: 11, name: '富甲行銷有限公司', logo: '/images/fujia.png', category: '顧問服務', description: '提供專業行銷策略規劃與顧問服務，協助企業打造品牌影響力，開拓市場商機。' },
 ]
 
 export default function LeadershipPage() {
@@ -132,9 +134,11 @@ export default function LeadershipPage() {
                 <h3 className="text-lg font-semibold text-gray-800 text-center mb-2">{brand.name}</h3>
                 <p className="text-sm text-gray-600 text-center mb-4">{brand.category}</p>
                 <p className="text-gray-600 text-sm mb-4">{brand.description}</p>
-                <div className="text-center">
-                  <a href={brand.website} target="_blank" rel="noopener noreferrer" className="text-red-600 hover:text-red-800 text-sm font-medium">訪問官網 →</a>
-                </div>
+                {brand.website && (
+                  <div className="text-center">
+                    <a href={brand.website} target="_blank" rel="noopener noreferrer" className="text-red-600 hover:text-red-800 text-sm font-medium">訪問官網 →</a>
+                  </div>
+                )}
               </div>
             ))}
           </div>

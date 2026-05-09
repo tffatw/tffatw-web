@@ -9,11 +9,13 @@ const brandCategories = [
   { label: '服務業', value: '服務業' },
   { label: '金融機構', value: '金融機構' },
   { label: '媒體機構', value: '媒體機構' },
+  { label: '顧問服務', value: '顧問服務' },
 ]
 
 const brands = [
   { id: 1, name: '紅橘子', logo: '/images/redorange.png', category: '早餐', description: '紅橘子，開啟你幸福的每一天。我們為了幸福而開店，當然也要每天都很幸福。', website: 'https://www.redorange.com.tw/' },
   { id: 2, name: '少點鹽', logo: '/images/saltless.png', category: '健康餐盒', description: '少點鹽健康餐盒專賣，顛覆傳統水煮餐盒印象，當天新鮮食材現烹調，少油少鹽呈現食物的原味，每口都新鮮，簡單卻又不失美味。', website: 'https://www.healthittaipei.com.tw' },
+  { id: 3, name: '富甲行銷有限公司', logo: '/images/fujia.png', category: '顧問服務', description: '提供專業行銷策略規劃與顧問服務，協助企業打造品牌影響力，開拓市場商機。' },
 ]
 
 const processSteps = [
@@ -58,9 +60,11 @@ export default function BrandsPage() {
                 <h3 className="text-lg font-semibold text-gray-800 text-center mb-2">{brand.name}</h3>
                 <p className="text-sm text-gray-600 text-center mb-4">{brand.category}</p>
                 <p className="text-gray-600 text-sm mb-4">{brand.description}</p>
-                <div className="text-center">
-                  <a href={brand.website} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 text-sm font-medium">訪問官網 →</a>
-                </div>
+                {brand.website && (
+                  <div className="text-center">
+                    <a href={brand.website} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 text-sm font-medium">訪問官網 →</a>
+                  </div>
+                )}
               </div>
             ))}
           </div>

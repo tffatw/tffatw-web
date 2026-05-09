@@ -3,7 +3,7 @@ import EventDetailClient from './EventDetailClient'
 import Link from 'next/link'
 
 export function generateStaticParams() {
-  return ['1', '2', '3', '4', '5', '6', '7', '8'].map(id => ({ id }))
+  return eventService.getAllEvents().map(event => ({ id: event.id }))
 }
 
 export default function EventDetailPage({ params }) {
