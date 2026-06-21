@@ -6,8 +6,9 @@ export function generateStaticParams() {
   return eventService.getAllEvents().map(event => ({ id: event.id }))
 }
 
-export default function EventDetailPage({ params }) {
-  const event = eventService.getEventById(params.id)
+export default async function EventDetailPage({ params }) {
+  const { id } = await params
+  const event = eventService.getEventById(id)
 
   if (!event) {
     return (
@@ -24,6 +25,6 @@ export default function EventDetailPage({ params }) {
     )
   }
 
-  const relatedEvents = eventService.getRelatedEvents(params.id, 3)
+  const relatedEvents = eventService.getRelatedEvents(id, 3)
   return <EventDetailClient event={event} relatedEvents={relatedEvents} />
 }
