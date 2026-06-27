@@ -1,14 +1,12 @@
-import { eventService } from '@/lib/eventService'
+import { getEventById, getRelatedEvents } from '@/lib/articleService'
 import EventDetailClient from './EventDetailClient'
 import Link from 'next/link'
 
-export function generateStaticParams() {
-  return eventService.getAllEvents().map(event => ({ id: event.id }))
-}
+export const dynamic = 'force-dynamic'
 
 export default async function EventDetailPage({ params }) {
   const { id } = await params
-  const event = eventService.getEventById(id)
+  const event = await getEventById(id)
 
   if (!event) {
     return (
@@ -25,6 +23,6 @@ export default async function EventDetailPage({ params }) {
     )
   }
 
-  const relatedEvents = eventService.getRelatedEvents(id, 3)
+  const relatedEvents = await getRelatedEvents(id, 3)
   return <EventDetailClient event={event} relatedEvents={relatedEvents} />
 }

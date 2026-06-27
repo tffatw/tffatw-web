@@ -67,7 +67,7 @@ export default function ContactPage() {
               <div className="w-20 h-1 bg-[#FFB84D] mb-8"></div>
               <div className="space-y-6">
                 {[
-                  { icon: 'M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z M15 11a3 3 0 11-6 0 3 3 0 016 0z', title: '辦公地址', content: '台北市內湖區新湖二路156號' },
+                  { icon: 'M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z M15 11a3 3 0 11-6 0 3 3 0 016 0z', title: '辦公地址', content: '台北市松山區塔悠路303號' },
                   { icon: 'M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z', title: '電話', content: '0916-044-823' },
                   { icon: 'M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z', title: '電子信箱', content: '服務諮詢: tffatw.org@gmail.com' },
                   { icon: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z', title: '工作時間', content: '週一至週五: 上午9:00 - 下午5:30\n週六、週日及法定節假日休息' },
@@ -169,7 +169,7 @@ export default function ContactPage() {
           </div>
           <div className="h-96 rounded-lg overflow-hidden shadow-md">
             <iframe
-              src="https://maps.google.com/maps?q=台北市內湖區新湖二路156號&t=&z=17&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=台北市松山區塔悠路303號&t=&z=17&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -179,7 +179,7 @@ export default function ContactPage() {
             />
           </div>
           <div className="mt-4 text-center text-gray-600">
-            <p>地址：台北市內湖區新湖二路156號</p>
+            <p>地址：台北市松山區塔悠路303號</p>
           </div>
         </div>
       </section>
