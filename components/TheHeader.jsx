@@ -17,13 +17,16 @@ export default function TheHeader() {
   const pathname = usePathname()
 
   return (
-    <header className="bg-white shadow">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
       <nav className="container-custom py-4">
         <div className="flex flex-wrap justify-between items-center gap-4 md:flex-nowrap">
           <div className="flex items-center">
-            <Link href="/" className="flex items-center">
-              <img src="/images/logo.jpg" alt="台灣速食餐飲協會" className="h-10 w-auto mr-2" />
-              <span className="text-xl font-bold text-red-700">台灣速食餐飲協會</span>
+            <Link href="/" className="flex items-center space-x-2">
+              <img src="/images/logo.jpg" alt="台灣速食餐飲協會" className="h-10 w-auto" />
+              <div>
+                <p className="text-base font-bold text-[#2C3E50] leading-tight">台灣速食餐飲協會</p>
+                <p className="text-xs text-[#6B7280] leading-tight">Taiwan Fast Food Association</p>
+              </div>
             </Link>
           </div>
 
@@ -47,13 +50,14 @@ export default function TheHeader() {
                 <li key={href}>
                   <Link
                     href={href}
-                    className={
-                      pathname === href
-                        ? 'text-red-600 font-semibold'
-                        : 'text-gray-700 hover:text-red-600 font-medium'
-                    }
+                    className={`relative group font-medium transition-colors duration-300 ${
+                      pathname === href ? 'text-[#FFB84D]' : 'text-[#2C3E50] hover:text-[#FFB84D]'
+                    }`}
                   >
                     {label}
+                    <span className={`absolute bottom-0 left-0 h-0.5 bg-[#FFB84D] transition-all duration-300 ${
+                      pathname === href ? 'w-full' : 'w-0 group-hover:w-full'
+                    }`} />
                   </Link>
                 </li>
               ))}

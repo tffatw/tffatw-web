@@ -64,7 +64,7 @@ export default function EventsClient({ initialEvents }) {
 
   return (
     <div>
-      <section className="bg-[#e0725f] text-white py-20">
+      <section className="bg-gradient-to-r from-[#FFB84D] to-[#FFA07A] text-white py-20">
         <div className="container-custom text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">活動資訊</h1>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto">掌握協會最新動態與行業資訊</p>
@@ -77,7 +77,7 @@ export default function EventsClient({ initialEvents }) {
             <div className="flex flex-wrap gap-3">
               <button
                 onClick={() => handleCategoryChange('all')}
-                className={`px-4 py-2 rounded-full text-sm font-medium ${currentCategory === 'all' ? 'bg-red-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
+                className={`px-4 py-2 rounded-full text-sm font-medium ${currentCategory === 'all' ? 'bg-[#FFB84D] text-[#2C3E50]' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
               >
                 全部
               </button>
@@ -85,7 +85,7 @@ export default function EventsClient({ initialEvents }) {
                 <button
                   key={cat.value}
                   onClick={() => handleCategoryChange(cat.value)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium ${currentCategory === cat.value ? 'bg-red-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
+                  className={`px-4 py-2 rounded-full text-sm font-medium ${currentCategory === cat.value ? 'bg-[#FFB84D] text-[#2C3E50]' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
                 >
                   {cat.label}
                 </button>
@@ -97,7 +97,7 @@ export default function EventsClient({ initialEvents }) {
                 value={searchQuery}
                 onChange={handleSearchChange}
                 placeholder="搜尋活動..."
-                className="border border-gray-300 rounded-full py-2 px-4 w-full md:w-64 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                className="border border-gray-300 rounded-full py-2 px-4 w-full md:w-64 focus:outline-none focus:ring-2 focus:ring-[#FFB84D] focus:border-transparent"
               />
             </div>
           </div>
@@ -110,7 +110,7 @@ export default function EventsClient({ initialEvents }) {
             <div className="text-center py-12">
               <h3 className="text-xl font-semibold text-gray-700 mb-2">沒有找到符合條件的活動</h3>
               <p className="text-gray-500">請嘗試其他搜尋條件或瀏覽全部活動</p>
-              <button onClick={resetFilters} className="mt-4 text-red-600 hover:text-red-800 font-medium">
+              <button onClick={resetFilters} className="mt-4 text-[#FFB84D] hover:text-[#FFA07A] font-medium">
                 重置篩選條件
               </button>
             </div>
@@ -122,7 +122,7 @@ export default function EventsClient({ initialEvents }) {
                     <div className="relative overflow-hidden">
                       <img src={event.image} alt={event.title} className="w-full h-52 object-cover transition duration-500 group-hover:scale-105" />
                       <div className="absolute top-4 left-4">
-                        <span className="inline-block bg-red-600 text-white text-sm font-semibold px-3 py-1 rounded">{event.type}</span>
+                        <span className="inline-block bg-[#FFB84D] text-[#2C3E50] text-sm font-semibold px-3 py-1 rounded">{event.type}</span>
                       </div>
                       <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
                         <div className="flex items-center text-white">
@@ -133,14 +133,14 @@ export default function EventsClient({ initialEvents }) {
                   </Link>
                   <div className="p-6">
                     <Link href={`/events/${event.id}`}>
-                      <h3 className="text-xl font-semibold text-gray-800 mb-3 line-clamp-2 transition-colors hover:text-red-600">
+                      <h3 className="text-xl font-semibold text-gray-800 mb-3 line-clamp-2 transition-colors hover:text-[#FFB84D]">
                         {event.title}
                       </h3>
                     </Link>
                     <p className="text-gray-600 mb-4 line-clamp-3">{event.description}</p>
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-gray-500">{event.location}</span>
-                      <Link href={`/events/${event.id}`} className="text-red-600 hover:text-red-800 font-medium text-sm">
+                      <Link href={`/events/${event.id}`} className="text-[#FFB84D] hover:text-[#FFA07A] font-medium text-sm">
                         查看詳情 &rarr;
                       </Link>
                     </div>
@@ -162,7 +162,7 @@ export default function EventsClient({ initialEvents }) {
                 <button
                   key={page}
                   onClick={() => setCurrentPage(page)}
-                  className={`px-3 py-1 rounded text-sm ${currentPage === page ? 'bg-red-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
+                  className={`px-3 py-1 rounded text-sm ${currentPage === page ? 'bg-[#FFB84D] text-[#2C3E50]' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
                 >
                   {page}
                 </button>
