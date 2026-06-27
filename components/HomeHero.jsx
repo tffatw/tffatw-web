@@ -3,7 +3,7 @@ import { Sparkles, ArrowRight } from 'lucide-react'
 
 export default function HomeHero() {
   return (
-    <section className="relative min-h-screen flex items-center">
+    <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* 漸層背景 */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#FFF5E6] via-[#F9F9F9] to-[#FFE8CC] -z-10" />
 
@@ -54,7 +54,7 @@ export default function HomeHero() {
               <img
                 src="/images/homepage/1.png"
                 alt="台灣速食餐飲協會"
-                className="w-full h-full object-cover"
+                className="w-full h-auto object-cover"
               />
             </div>
           </div>

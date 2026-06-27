@@ -19,7 +19,7 @@ export default function TheHeader() {
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
       <nav className="container-custom py-4">
-        <div className="flex flex-wrap justify-between items-center gap-4 md:flex-nowrap">
+        <div className="flex flex-wrap justify-between items-center md:flex-nowrap">
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
               <img src="/images/logo.jpg" alt="台灣速食餐飲協會" className="h-10 w-auto" />
@@ -44,12 +44,13 @@ export default function TheHeader() {
             </svg>
           </button>
 
-          <div className={`${isMenuOpen ? 'block' : 'hidden'} md:flex`}>
-            <ul className="flex flex-col md:flex-row md:space-x-8 space-y-2 md:space-y-0">
+          <div className={`${isMenuOpen ? 'flex' : 'hidden'} flex-col w-full md:flex md:flex-row md:w-auto md:items-center`}>
+            <ul className="flex flex-col md:flex-row md:space-x-8 space-y-1 md:space-y-0 border-t md:border-t-0 border-gray-100 pt-3 pb-2 md:py-0">
               {navLinks.map(({ href, label }) => (
                 <li key={href}>
                   <Link
                     href={href}
+                    onClick={() => setIsMenuOpen(false)}
                     className={`relative group font-medium transition-colors duration-300 ${
                       pathname === href ? 'text-[#FFB84D]' : 'text-[#2C3E50] hover:text-[#FFB84D]'
                     }`}
