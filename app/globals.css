@@ -29,7 +29,7 @@ body {
     @apply px-4 py-2 rounded-md font-medium transition-colors;
   }
   .btn-primary {
-    @apply bg-blue-600 text-white hover:bg-blue-700;
+    @apply bg-gradient-to-r from-[#FFB84D] to-[#FFA07A] text-[#2C3E50] hover:opacity-90;
   }
   .btn-secondary {
     @apply bg-gray-200 text-gray-800 hover:bg-gray-300;
