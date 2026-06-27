@@ -32,9 +32,9 @@ export default function EventDetailClient({ event, relatedEvents }) {
 
   return (
     <div className="pb-16">
-      <section className="bg-[#e0725f] text-white pt-24 pb-16">
+      <section className="bg-gradient-to-r from-[#FFB84D] to-[#FFA07A] text-white pt-24 pb-16">
         <div className="container-custom">
-          <div className="flex items-center text-red-200 mb-4">
+          <div className="flex items-center text-amber-100 mb-4">
             <Link href="/events" className="flex items-center hover:text-white transition-colors">
               <svg className="w-5 h-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -46,11 +46,11 @@ export default function EventDetailClient({ event, relatedEvents }) {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             <div className="md:col-span-8">
               <div className="flex flex-wrap gap-2 mb-4">
-                <span className="px-3 py-1 text-sm bg-red-700 text-white rounded-full">{event.type}</span>
+                <span className="px-3 py-1 text-sm bg-white/20 text-white rounded-full">{event.type}</span>
                 <span className={`px-3 py-1 text-sm rounded-full ${getStatusBadgeClass(event.status)}`}>{event.status}</span>
               </div>
               <h1 className="text-3xl md:text-4xl font-bold mb-4">{event.title}</h1>
-              <div className="flex flex-wrap text-red-100 mb-6">
+              <div className="flex flex-wrap text-amber-100 mb-6">
                 <div className="flex items-center mr-6 mb-2">
                   <svg className="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -113,7 +113,7 @@ export default function EventDetailClient({ event, relatedEvents }) {
                       <div
                         key={index}
                         onClick={() => setCurrentImage(img)}
-                        className={`cursor-pointer border-2 rounded-md overflow-hidden transition-all w-24 h-24 flex-shrink-0 ${currentImage === img ? 'border-red-500' : 'border-transparent hover:border-red-300'}`}
+                        className={`cursor-pointer border-2 rounded-md overflow-hidden transition-all w-24 h-24 flex-shrink-0 ${currentImage === img ? 'border-[#FFB84D]' : 'border-transparent hover:border-[#FFB84D]/60'}`}
                       >
                         <img src={img} alt={`${event.title} thumbnail ${index + 1}`} className="w-full h-full object-cover" />
                       </div>
@@ -137,7 +137,7 @@ export default function EventDetailClient({ event, relatedEvents }) {
                   <h3 className="text-lg font-semibold text-gray-800 mb-4">分享活動</h3>
                   <div className="flex space-x-4">
                     {sharePaths.map((path, i) => (
-                      <a key={i} href="#" className="bg-gray-200 p-2 rounded-full hover:bg-red-100 hover:text-red-600 transition-colors">
+                      <a key={i} href="#" className="bg-gray-200 p-2 rounded-full hover:bg-[#FFF5E6] hover:text-[#FFB84D] transition-colors">
                         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                           <path d={path} />
                         </svg>
@@ -172,7 +172,7 @@ export default function EventDetailClient({ event, relatedEvents }) {
                         <div key={re.id} className="bg-gray-50 p-4 rounded-lg">
                           <div className="text-sm text-gray-500 mb-1">{re.date}</div>
                           <h4 className="font-medium text-gray-800 mb-1">{re.title}</h4>
-                          <Link href={`/events/${re.id}`} className="text-red-600 text-sm hover:text-red-800">查看詳情</Link>
+                          <Link href={`/events/${re.id}`} className="text-[#FFB84D] text-sm hover:text-[#FFA07A]">查看詳情</Link>
                         </div>
                       ))}
                     </div>

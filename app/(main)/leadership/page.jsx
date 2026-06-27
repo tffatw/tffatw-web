@@ -225,7 +225,7 @@ export default function LeadershipPage() {
 
   return (
     <div>
-      <section className="bg-[#e0725f] text-white py-20">
+      <section className="bg-gradient-to-r from-[#FFB84D] to-[#FFA07A] text-white py-20">
         <div className="container-custom text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">協會成員</h1>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto">
@@ -240,7 +240,7 @@ export default function LeadershipPage() {
             <h2 className="text-3xl font-bold text-gray-800 mb-4">
               本屆理事會
             </h2>
-            <div className="w-20 h-1 bg-red-600 mx-auto mb-4"></div>
+            <div className="w-20 h-1 bg-[#FFB84D] mx-auto mb-4"></div>
             <p className="text-gray-600 max-w-2xl mx-auto">
               第十一屆理事會成員由行業內著名企業領導和專業人士組成
             </p>
@@ -249,7 +249,7 @@ export default function LeadershipPage() {
             <div key={i} className="mb-16">
               <div className="flex flex-col md:flex-row items-center gap-8 max-w-4xl mx-auto">
                 <div
-                  className={`overflow-hidden rounded-full border-4 border-red-100 shadow-lg flex-shrink-0 cursor-pointer hover:border-red-400 transition-colors duration-200 ${member.title === "理事長" ? "w-64 h-64" : "w-48 h-48"}`}
+                  className={`overflow-hidden rounded-full border-4 border-[#FFB84D]/20 shadow-lg flex-shrink-0 cursor-pointer hover:border-[#FFB84D] transition-colors duration-200 ${member.title === "理事長" ? "w-64 h-64" : "w-48 h-48"}`}
                   onClick={() => setLightboxImage({ src: member.image, name: member.name })}
                 >
                   <img
@@ -262,7 +262,7 @@ export default function LeadershipPage() {
                   <h3 className="text-2xl font-bold text-gray-800 mb-2">
                     {member.name}
                   </h3>
-                  <p className="text-red-600 font-medium mb-4">
+                  <p className="text-[#FFB84D] font-medium mb-4">
                     {member.title}
                   </p>
                   <ul className="list-disc list-inside text-gray-600 leading-relaxed">
@@ -283,7 +283,7 @@ export default function LeadershipPage() {
             <h2 className="text-3xl font-bold text-gray-800 mb-4">
               歷屆理事長
             </h2>
-            <div className="w-20 h-1 bg-red-600 mx-auto mb-4"></div>
+            <div className="w-20 h-1 bg-[#FFB84D] mx-auto mb-4"></div>
             <p className="text-gray-600 max-w-2xl mx-auto">
               感謝歷屆理事長為協會發展做出的重要貢獻
             </p>
@@ -291,7 +291,7 @@ export default function LeadershipPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {pastChairmen.map((c, i) => (
               <div key={i} className="card p-6 text-center">
-                <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-red-100 mx-auto mb-4">
+                <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-[#FFB84D]/20 mx-auto mb-4">
                   <img
                     src={c.image}
                     alt={c.name}
@@ -299,7 +299,7 @@ export default function LeadershipPage() {
                   />
                 </div>
                 <h3 className="text-lg font-bold text-gray-800">{c.name}</h3>
-                <p className="text-red-600 font-medium mb-2">{c.term}</p>
+                <p className="text-[#FFB84D] font-medium mb-2">{c.term}</p>
                 <p className="text-gray-600 text-sm mb-2">{c.period}</p>
                 <p className="text-gray-600 text-sm">{c.company}</p>
               </div>
@@ -312,7 +312,7 @@ export default function LeadershipPage() {
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">品牌成員</h2>
-            <div className="w-20 h-1 bg-red-600 mx-auto mb-4"></div>
+            <div className="w-20 h-1 bg-[#FFB84D] mx-auto mb-4"></div>
             <p className="text-gray-600 max-w-2xl mx-auto">
               匯聚了國內頂尖速食餐飲品牌的菁英領導者，每位成員皆為業界翹楚，憑藉豐富的市場經驗與專業知識，共同致力於推動產業進步與創新。
             </p>
@@ -320,7 +320,7 @@ export default function LeadershipPage() {
           <div className="mb-8 flex flex-wrap justify-center gap-4">
             <button
               onClick={() => setCurrentCategory("all")}
-              className={`px-4 py-2 rounded-full text-sm font-medium ${currentCategory === "all" ? "bg-red-600 text-white" : "bg-gray-200 text-gray-700 hover:bg-gray-300"}`}
+              className={`px-4 py-2 rounded-full text-sm font-medium ${currentCategory === "all" ? "bg-[#FFB84D] text-[#2C3E50]" : "bg-gray-200 text-gray-700 hover:bg-gray-300"}`}
             >
               全部
             </button>
@@ -328,7 +328,7 @@ export default function LeadershipPage() {
               <button
                 key={cat.value}
                 onClick={() => setCurrentCategory(cat.value)}
-                className={`px-4 py-2 rounded-full text-sm font-medium ${currentCategory === cat.value ? "bg-red-600 text-white" : "bg-gray-200 text-gray-700 hover:bg-gray-300"}`}
+                className={`px-4 py-2 rounded-full text-sm font-medium ${currentCategory === cat.value ? "bg-[#FFB84D] text-[#2C3E50]" : "bg-gray-200 text-gray-700 hover:bg-gray-300"}`}
               >
                 {cat.label}
               </button>
@@ -362,7 +362,7 @@ export default function LeadershipPage() {
                       href={brand.website}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-red-600 hover:text-red-800 text-sm font-medium"
+                      className="text-[#FFB84D] hover:text-[#FFA07A] text-sm font-medium"
                     >
                       訪問官網 →
                     </a>

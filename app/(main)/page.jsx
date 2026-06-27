@@ -1,112 +1,136 @@
-'use client'
-
-import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { Calendar, MapPin, Users, ArrowRight } from 'lucide-react'
+import HomeHero from '@/components/HomeHero'
+import HomeServices from '@/components/HomeServices'
 import { eventService } from '@/lib/eventService'
 
-const slides = [
-  { title: '台灣速食餐飲協會', image: '/images/homepage/1.png' },
-  { title: '專業的行業支持', image: '/images/homepage/2.png' },
-  { title: '定期舉辦行業活動', image: '/images/homepage/3.png' },
-  { title: '新會員招募', image: '/images/homepage/4.png' },
-]
-
 export default function HomePage() {
-  const [currentSlide, setCurrentSlide] = useState(0)
-  const [featuredEvents, setFeaturedEvents] = useState([])
-
-  useEffect(() => {
-    setFeaturedEvents(eventService.getFeaturedEvents(3))
-    const interval = setInterval(() => {
-      setCurrentSlide(s => (s + 1) % slides.length)
-    }, 5000)
-    return () => clearInterval(interval)
-  }, [])
+  const featuredEvents = eventService.getFeaturedEvents(3)
 
   return (
     <div>
-      <section className="relative">
-        <div className="carousel-container relative overflow-hidden aspect-[4/3] md:aspect-[3/1]">
-          {slides.map((slide, index) => (
-            <div
-              key={index}
-              className={`carousel-slide absolute inset-0 transition-opacity duration-1000 ${currentSlide === index ? 'opacity-100' : 'opacity-0'}`}
-            >
-              <img src={slide.image} alt={slide.title} className="w-full h-full object-cover" />
-            </div>
-          ))}
-          <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
-            {slides.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full ${currentSlide === index ? 'bg-white' : 'bg-gray-400'}`}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Hero */}
+      <HomeHero />
 
+      {/* 關於我們 */}
       <section className="py-16 bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">關於我們的協會</h2>
-            <div className="w-20 h-1 bg-red-600 mx-auto"></div>
+            <div className="inline-block px-4 py-2 bg-[#FFF5E6] rounded-full mb-4">
+              <span className="text-[#FFB84D] font-medium">About Us</span>
+            </div>
+            <h2 className="text-3xl font-bold text-[#2C3E50] mb-4">關於我們的協會</h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-[#FFB84D] to-[#FFA07A] mx-auto rounded-full" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
-              <img src="/activity/20250213/20250213_activity_1.jpg" alt="協會介紹" className="rounded-lg shadow-lg w-full h-auto" />
+              <img src="/activity/20250213/20250213_activity_1.jpg" alt="協會介紹" className="rounded-2xl shadow-lg w-full h-auto" />
             </div>
             <div>
-              <h3 className="text-2xl font-semibold text-gray-800 mb-4">我們的使命</h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">
+              <h3 className="text-2xl font-semibold text-[#2C3E50] mb-4">我們的使命</h3>
+              <p className="text-[#6B7280] mb-6 leading-relaxed">
                 本會前身「台灣早餐速食促進協會」，由多家早餐速食業之翹楚所共同努力促成之，奉內政部台內社字第0930071455號許可並於94年2月25日正式成立並推選張廷章先生擔任創會理事長，
                 本著以同業聯盟及經驗分享為宗旨，共同致力於促進速食連鎖加盟事業之健全發展。
               </p>
-              <p className="text-gray-600 mb-6 leading-relaxed">
+              <p className="text-[#6B7280] mb-6 leading-relaxed">
                 經第二屆理事長蔡澔鎔先生努力，第三屆會員大會提案正式通過並奉內政部台內社字第0980037539號許可核准正名為「台灣速食餐飲協會」，更名首屆理事長為葉益芳先生。
                 未來，本會將秉持專業的態度，提供會員教育講習、海外市場經營資訊、供應鏈輔導諮詢等業務，期望本會成為兩岸速食餐飲產業最大服務平台的願景得以實現。
               </p>
-              <Link href="/about" className="bg-[#e0725f] btn btn-primary hover:bg-[#d06050]">詳細了解</Link>
+              <Link
+                href="/about"
+                className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-[#FFB84D] to-[#FFA07A] text-[#2C3E50] font-semibold rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5"
+              >
+                詳細了解
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-gray-100">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">最新活動</h2>
-            <div className="w-20 h-1 bg-red-600 mx-auto"></div>
+      {/* 服務與活動 */}
+      <HomeServices />
+
+      {/* 最新活動 */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <div className="inline-block px-4 py-2 bg-[#FFF5E6] rounded-full mb-4">
+              <span className="text-[#FFB84D] font-medium">Events</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#2C3E50] mb-4">最新活動</h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-[#FFB84D] to-[#FFA07A] mx-auto rounded-full mb-6" />
+            <p className="text-[#6B7280] max-w-2xl mx-auto">
+              定期舉辦各類活動，促進會員交流與產業發展
+            </p>
           </div>
+
+          {/* Event Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {featuredEvents.map((event, index) => (
-              <div key={index} className="card">
-                <Link href={`/events/${event.id}`}>
-                  <img src={event.image} alt={event.title} className="w-full h-48 object-cover" />
-                </Link>
-                <div className="p-6">
-                  <div className="flex items-center text-gray-500 mb-2">
-                    <svg className="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                    {event.date}
+            {featuredEvents.map((event) => (
+              <Link
+                key={event.id}
+                href={`/events/${event.id}`}
+                className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-[#FFB84D]/10"
+              >
+                {/* Cover image */}
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={event.image}
+                    alt={event.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <h3 className="text-white font-semibold text-lg leading-snug">{event.title}</h3>
                   </div>
-                  <Link href={`/events/${event.id}`}>
-                    <h3 className="text-xl font-semibold text-gray-800 mb-2 hover:text-red-600 transition-colors">
-                      {event.title}
-                    </h3>
-                  </Link>
-                  <p className="text-gray-600 mb-4">{event.description}</p>
-                  <Link href={`/events/${event.id}`} className="text-red-600 font-medium hover:text-red-800">
-                    查看詳情 &rarr;
-                  </Link>
                 </div>
-              </div>
+
+                {/* Card body */}
+                <div className="p-6 space-y-4">
+                  <p className="text-[#6B7280] text-sm leading-relaxed line-clamp-2">
+                    {event.description}
+                  </p>
+
+                  <div className="space-y-2 pt-2 border-t border-[#FFB84D]/20">
+                    <div className="flex items-center text-sm text-[#6B7280]">
+                      <Calendar className="w-4 h-4 text-[#FFB84D] mr-3 flex-shrink-0" />
+                      {event.date}
+                    </div>
+                    <div className="flex items-center text-sm text-[#6B7280]">
+                      <MapPin className="w-4 h-4 text-[#FFB84D] mr-3 flex-shrink-0" />
+                      {event.location}
+                    </div>
+                    {event.participants && (
+                      <div className="flex items-center text-sm text-[#6B7280]">
+                        <Users className="w-4 h-4 text-[#FFB84D] mr-3 flex-shrink-0" />
+                        {event.participants}
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="pt-2 flex items-center text-[#FFB84D] group-hover:text-[#FFA07A] transition-colors">
+                    <span className="text-sm font-medium">查看詳情</span>
+                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </Link>
             ))}
           </div>
-          <div className="text-center mt-10">
-            <Link href="/events" className="bg-[#e0725f] btn btn-primary hover:bg-[#d06050]">查看所有活動</Link>
+
+          {/* CTA Banner */}
+          <div className="mt-16 bg-gradient-to-br from-[#FFB84D]/10 to-[#FFF5E6] rounded-3xl p-8 md:p-12 text-center">
+            <h3 className="text-2xl font-bold text-[#2C3E50] mb-4">更多精彩活動</h3>
+            <p className="text-[#6B7280] mb-6 max-w-2xl mx-auto">
+              查看所有活動資訊，不要錯過任何與產業夥伴交流的機會
+            </p>
+            <Link
+              href="/events"
+              className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[#FFB84D] to-[#FFA07A] text-[#2C3E50] font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+            >
+              查看所有活動
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
           </div>
         </div>
       </section>

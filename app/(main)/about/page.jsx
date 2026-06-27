@@ -42,7 +42,7 @@ const timelineItems = [
 export default function AboutPage() {
   return (
     <div>
-      <section className="bg-[#e0725f] text-white py-20">
+      <section className="bg-gradient-to-r from-[#FFB84D] to-[#FFA07A] text-white py-20">
         <div className="container-custom text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">關於我們</h1>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto">
@@ -58,7 +58,7 @@ export default function AboutPage() {
               <h2 className="text-3xl font-bold text-gray-800 mb-6">
                 我們的協會
               </h2>
-              <div className="w-20 h-1 bg-red-600 mb-6"></div>
+              <div className="w-20 h-1 bg-[#FFB84D] mb-6"></div>
               <p className="text-gray-600 mb-6 leading-relaxed">
                 本會前身「台灣早餐速食促進協會」，由多家早餐速食業之翹楚所共同努力促成之，奉內政部台內社字第0930071455號許可並於94年2月25日正式成立並推選張廷章先生擔任創會理事長，本著以同業聯盟及經驗分享為宗旨，共同致力於促進速食連鎖加盟事業之健全發展。經第二屆理事長蔡澔鎔先生努力，第三屆會員大會提案正式通過並奉內政部台內社字第0980037539號許可核准正名為「台灣速食餐飲協會」，更名首屆理事長為葉益芳先生。
                 未來，本會將秉持專業的態度，提供會員教育講習、海外市場經營資訊、供應鏈輔導諮詢等業務，期望本會成為兩岸速食餐飲產業最大服務平台的願景得以實現。
@@ -84,13 +84,13 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold text-gray-800 mb-4">
               我們的使命與願景
             </h2>
-            <div className="w-20 h-1 bg-red-600 mx-auto"></div>
+            <div className="w-20 h-1 bg-[#FFB84D] mx-auto"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="card p-8">
-              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
+              <div className="w-16 h-16 bg-[#FFF5E6] rounded-full flex items-center justify-center mb-6">
                 <svg
-                  className="w-8 h-8 text-red-600"
+                  className="w-8 h-8 text-[#FFB84D]"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -111,9 +111,9 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="card p-8">
-              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
+              <div className="w-16 h-16 bg-[#FFF5E6] rounded-full flex items-center justify-center mb-6">
                 <svg
-                  className="w-8 h-8 text-red-600"
+                  className="w-8 h-8 text-[#FFB84D]"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -143,13 +143,13 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold text-gray-800 mb-4">
               我們的歷史與發展
             </h2>
-            <div className="w-20 h-1 bg-red-600 mx-auto"></div>
+            <div className="w-20 h-1 bg-[#FFB84D] mx-auto"></div>
           </div>
-          <div className="relative border-l-4 border-red-600 ml-6 md:ml-8 pl-8 pb-8">
+          <div className="relative border-l-4 border-[#FFB84D] ml-6 md:ml-8 pl-8 pb-8">
             <div className="space-y-12">
               {timelineItems.map((item) => (
                 <div key={item.num} className="relative">
-                  <div className="absolute -left-12 md:-left-14 top-0 w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
+                  <div className="absolute -left-12 md:-left-14 top-0 w-8 h-8 bg-[#FFB84D] rounded-full flex items-center justify-center">
                     <span className="text-white font-bold">{item.num}</span>
                   </div>
                   <div>
