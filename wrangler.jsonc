@@ -23,5 +23,19 @@
 		// Enable image optimization
 		// see https://opennext.js.org/cloudflare/howtos/image
 		"binding": "IMAGES"
-	}
+	},
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "tffatw-db",
+			"database_id": "d3f9ed79-834f-45a7-ac17-e4cfa35d509c",
+			"migrations_dir": "./migrations"
+		}
+	],
+	"r2_buckets": [
+		{
+			"binding": "R2",
+			"bucket_name": "tffatw-assets"
+		}
+	]
 }

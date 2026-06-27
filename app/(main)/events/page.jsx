@@ -1,7 +1,9 @@
-import { eventService } from '@/lib/eventService'
+import { getAllEvents } from '@/lib/articleService'
 import EventsClient from './EventsClient'
 
-export default function EventsPage() {
-  const allEvents = eventService.getAllEvents()
+export const dynamic = 'force-dynamic'
+
+export default async function EventsPage() {
+  const allEvents = await getAllEvents()
   return <EventsClient initialEvents={allEvents} />
 }

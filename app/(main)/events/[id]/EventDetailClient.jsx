@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import ReactMarkdown from 'react-markdown'
 
 const associationEmail = 'tffatw.org@gmail.com'
 
@@ -126,22 +127,7 @@ export default function EventDetailClient({ event, relatedEvents }) {
               )}
 
               <div className="prose max-w-none">
-                {(event.contentBlocks || []).map((block, index) => {
-                  if (block.type === 'heading') {
-                    return <h3 key={index} className="text-xl font-bold mt-6 mb-3">{block.content}</h3>
-                  }
-                  if (block.type === 'paragraph') {
-                    return <p key={index} className="mb-4" dangerouslySetInnerHTML={{ __html: block.content }} />
-                  }
-                  if (block.type === 'list') {
-                    return (
-                      <ul key={index} className="list-disc pl-6 mb-4">
-                        {block.items.map((item, i) => <li key={i}>{item}</li>)}
-                      </ul>
-                    )
-                  }
-                  return null
-                })}
+                <ReactMarkdown>{event.content ?? ''}</ReactMarkdown>
               </div>
             </div>
 
