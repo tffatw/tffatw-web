@@ -10,6 +10,12 @@ function getMailtoLink(eventTitle) {
   return `mailto:${associationEmail}?subject=${encodeURIComponent(`活動報名：${eventTitle}`)}`
 }
 
+function getReminderMailtoLink(eventTitle) {
+  const subject = encodeURIComponent(`活動提醒：${eventTitle}`)
+  const body = encodeURIComponent(`您好，\n\n活動「${eventTitle}」開放報名時，請提醒我，謝謝！`)
+  return `mailto:${associationEmail}?subject=${subject}&body=${body}`
+}
+
 function getStatusBadgeClass(status) {
   switch (status) {
     case '報名中': return 'bg-green-600 text-white'
@@ -84,7 +90,7 @@ export default function EventDetailClient({ event, relatedEvents }) {
                 <div className="bg-white text-gray-800 p-6 rounded-lg shadow-md">
                   <h3 className="text-xl font-bold mb-4">活動籌備中</h3>
                   <p className="text-gray-600 mb-4">活動正在籌備中，敬請期待...</p>
-                  <button className="btn btn-secondary w-full py-3">預約提醒</button>
+                  <a href={getReminderMailtoLink(event.title)} className="btn btn-secondary w-full py-3 inline-block text-center">預約提醒</a>
                 </div>
               ) : (
                 <div className="bg-white text-gray-800 p-6 rounded-lg shadow-md">
