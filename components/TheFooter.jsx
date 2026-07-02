@@ -41,7 +41,7 @@ export default function TheFooter() {
           <div>
             <h4 className="text-base font-semibold mb-4">聯絡資訊</h4>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li>台北市內湖區新湖二路 156 號</li>
+              <li>台北市松山區塔悠路303號</li>
               <li>
                 <a href="tel:0916044823" className="hover:text-[#FFB84D] transition-colors duration-200">
                   0916-044-823

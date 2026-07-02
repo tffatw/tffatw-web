@@ -2,6 +2,14 @@
 
 import { useState } from 'react'
 
+const subjectLabels = {
+  general: '一般諮詢',
+  membership: '會員事務',
+  cooperation: '合作洽談',
+  media: '媒體合作',
+  other: '其他',
+}
+
 const faqData = [
   { question: '如何成為協會會員？', answer: '企業可以通過我們的官網提交會員申請，或直接聯繫會員服務部門。申請通過審核後，繳納相應的會費即可成為正式會員。' },
   { question: '協會會員有哪些權益？', answer: '會員可以參加協會舉辦的各類活動，獲取行業資訊，享受專業諮詢服務，參與行業標準制定，以及與其他會員建立合作關係等。' },
@@ -29,10 +37,11 @@ export default function ContactPage() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
+          _subject: `【台灣速食餐飲協會】網站聯絡表單 - ${subjectLabels[form.subject] ?? form.subject}`,
           姓名: form.name,
           信箱: form.email,
           電話: form.phone,
-          主題: form.subject,
+          主題: subjectLabels[form.subject] ?? form.subject,
           留言: form.message,
         }),
       })

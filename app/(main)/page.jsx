@@ -2,10 +2,12 @@ import Link from 'next/link'
 import { Calendar, MapPin, Users, ArrowRight } from 'lucide-react'
 import HomeHero from '@/components/HomeHero'
 import HomeServices from '@/components/HomeServices'
-import { eventService } from '@/lib/eventService'
+import { getFeaturedEvents } from '@/lib/articleService'
 
-export default function HomePage() {
-  const featuredEvents = eventService.getFeaturedEvents(3)
+export const dynamic = 'force-dynamic'
+
+export default async function HomePage() {
+  const featuredEvents = await getFeaturedEvents(3)
 
   return (
     <div>
