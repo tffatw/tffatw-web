@@ -13,6 +13,7 @@ const currentBoardMembers = [
       "愛餡貓烘焙總經理",
       "天天蛋餅飯糰顧問",
       "天天韓式炙燒鍋顧問",
+      "火岩堂雞排創辦人",
     ],
   },
   {
@@ -250,7 +251,9 @@ export default function LeadershipPage() {
               <div className="flex flex-col md:flex-row items-center gap-8 max-w-4xl mx-auto">
                 <div
                   className={`overflow-hidden rounded-full border-4 border-[#FFB84D]/20 shadow-lg flex-shrink-0 cursor-pointer hover:border-[#FFB84D] transition-colors duration-200 ${member.title === "理事長" ? "w-64 h-64" : "w-48 h-48"}`}
-                  onClick={() => setLightboxImage({ src: member.image, name: member.name })}
+                  onClick={() =>
+                    setLightboxImage({ src: member.image, name: member.name })
+                  }
                 >
                   <img
                     src={member.image}
@@ -393,7 +396,9 @@ export default function LeadershipPage() {
               alt={lightboxImage.name}
               className="w-full rounded-lg shadow-2xl"
             />
-            <p className="text-white text-center mt-3 font-medium">{lightboxImage.name}</p>
+            <p className="text-white text-center mt-3 font-medium">
+              {lightboxImage.name}
+            </p>
           </div>
         </div>
       )}
