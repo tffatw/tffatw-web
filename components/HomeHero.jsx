@@ -1,5 +1,78 @@
+'use client'
+
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { Sparkles, ArrowRight } from 'lucide-react'
+import { Sparkles, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react'
+
+const HERO_IMAGES = [
+  '/images/homepage/1.png',
+  '/images/homepage/2.png',
+  '/images/homepage/3.png',
+  '/images/homepage/4.png',
+]
+
+function HeroCarousel() {
+  const [current, setCurrent] = useState(0)
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % HERO_IMAGES.length)
+    }, 5000)
+    return () => clearInterval(timer)
+  }, [])
+
+  const goTo = (index) => {
+    setCurrent((index + HERO_IMAGES.length) % HERO_IMAGES.length)
+  }
+
+  return (
+    <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[3/2]">
+      {HERO_IMAGES.map((src, index) => (
+        <img
+          key={src}
+          src={src}
+          alt="台灣速食餐飲協會"
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
+            index === current ? 'opacity-100' : 'opacity-0'
+          }`}
+        />
+      ))}
+
+      {/* 左右切換箭頭 */}
+      <button
+        type="button"
+        onClick={() => goTo(current - 1)}
+        aria-label="上一張圖片"
+        className="absolute left-3 top-1/2 -translate-y-1/2 flex items-center justify-center w-9 h-9 rounded-full bg-white/70 hover:bg-white text-[#2C3E50] shadow-md transition-colors"
+      >
+        <ChevronLeft className="w-5 h-5" />
+      </button>
+      <button
+        type="button"
+        onClick={() => goTo(current + 1)}
+        aria-label="下一張圖片"
+        className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center justify-center w-9 h-9 rounded-full bg-white/70 hover:bg-white text-[#2C3E50] shadow-md transition-colors"
+      >
+        <ChevronRight className="w-5 h-5" />
+      </button>
+
+      {/* 圓點指示器 */}
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
+        {HERO_IMAGES.map((src, index) => (
+          <button
+            key={src}
+            type="button"
+            onClick={() => goTo(index)}
+            aria-label={`切換至第 ${index + 1} 張圖片`}
+            className={`h-2 rounded-full transition-all duration-300 ${
+              index === current ? 'w-6 bg-white' : 'w-2 bg-white/60 hover:bg-white/80'
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  )
+}
 
 export default function HomeHero() {
   return (
@@ -47,15 +120,11 @@ export default function HomeHero() {
             </div>
           </div>
 
-          {/* 右欄：圖片 */}
+          {/* 右欄：輪播圖 */}
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-br from-[#FFB84D]/20 to-[#4A7C9B]/20 rounded-3xl rotate-3" />
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-              <img
-                src="/images/homepage/1.png"
-                alt="台灣速食餐飲協會"
-                className="w-full h-auto object-cover"
-              />
+            <div className="relative">
+              <HeroCarousel />
             </div>
           </div>
         </div>
