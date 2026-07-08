@@ -2,11 +2,12 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Building2, FileText, ArrowLeft } from 'lucide-react'
+import { Building2, FileText, BarChart3, ArrowLeft } from 'lucide-react'
 
 const navItems = [
   { href: '/admin', label: '公司管理', icon: Building2, exact: true },
   { href: '/admin/articles', label: '文章管理', icon: FileText },
+  { href: '/admin/analytics', label: '分析報表', icon: BarChart3 },
 ]
 
 export default function AdminSidebar() {
