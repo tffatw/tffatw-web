@@ -1,3 +1,4 @@
+import Script from 'next/script'
 import './globals.css'
 
 export const metadata = {
@@ -8,7 +9,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="zh-TW">
-      <body>{children}</body>
+      <body>
+        {children}
+        {process.env.NEXT_PUBLIC_CF_ANALYTICS_TOKEN && (
+          <Script
+            defer
+            src="https://static.cloudflareinsights.com/beacon.min.js"
+            data-cf-beacon={`{"token": "${process.env.NEXT_PUBLIC_CF_ANALYTICS_TOKEN}"}`}
+            strategy="afterInteractive"
+          />
+        )}
+      </body>
     </html>
   )
 }
